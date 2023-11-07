@@ -25,12 +25,25 @@
     text-align:left;
     margin: 10px;
     /* border:5px solid black; */
+    box-shadow: 0 0 4px #787878;
+    border-radius: 20px;
+    transition: transform 0.2s;
   }
   
-  .place-image img {
+  .place-image {
     border-radius: 15px;
-    width: 300px;
     height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  .place-image>img{
+    border-radius: 15px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
   
   .place-content {
@@ -42,28 +55,23 @@
   
   .place-details {
     text-align: left;
+    margin: 1rem;
   }
   
   .place-title {
-    font-size: 20px;
+    font-size: 1.1rem;
     font-weight: bold;
     margin: 0;
-  }
-  
-  .place-rating {
-    display: flex;
-    /* align-items: center; */
-    color: #292722;
-  }
-  
-  .rating-value {
-    margin-left: 5px;
-    font-weight: bold;
+    margin-bottom: 1rem;
   }
   
   .place-spots {
-    font-size: 16px;
-    margin-top: 10px;
-    color: #777;
+    font-size: 13px;
+   margin: 0;
+   padding: 0;
+  }
+
+  .place-card:hover{
+    transform: scale(1.05);
   }
   

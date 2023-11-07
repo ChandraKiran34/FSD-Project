@@ -4,6 +4,7 @@ import bg from "../Assets/bg-pic.png";
 import places from "./Places";
 import PlaceCard from "./PlaceCard";
 import logo from '../Assets/logo.jpg'
+import Services from "../Components/Services";
 function Home() {
   return (
     <div className="home-page">
@@ -24,13 +25,18 @@ function Home() {
         </div>
       </div>
 
+      <div>
+        <h2 style={{color:"black"}}>FEATURED PLACES</h2>
+      </div>
+
       <section className="places">
         {places.map((place, index) => (
-          <div key={index} className="place-card" style={{display:"flex"}} >
-           <PlaceCard image={place.image} title={place.title} spots={place.spots}/>
-          </div>
+           <PlaceCard image={place.image} title={place.title} spots={place.spots} state={place.state}/>
+
         ))}
       </section>
+
+      <Services />
 
       <section className="call-to-action">
         <h2>Ready to Get Started?</h2>

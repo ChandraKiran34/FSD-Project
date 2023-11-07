@@ -67,7 +67,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-direction: row; /* Change to row to display places in a row */
+    flex-direction: row; 
   }
   
   .place-card {
@@ -75,7 +75,7 @@
     margin: 10px; /* Add spacing between place cards */
     display: flex;
     flex-direction: column; /* Display place cards in a column */
-    align-items: center; /* Center content horizontally */
+    /* align-items: center; */
   }
   
 
