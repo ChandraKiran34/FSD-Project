@@ -8,27 +8,26 @@ function Services() {
   return (
     <div
       className="container"
-
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${vacation})`,
         color: "#fff",
-        backgroundSize: "1500px 700px",
+        backgroundSize: "cover",
+        backgroundPositionX: "12%",
         padding: "20px 0",
-        width: "1500px",
         height: "650px",
-        overflowY:"hidden"
+        overflowY: "hidden",
       }}
     >
-      <div style={{marginTop:"245px"}}>
+      <div style={{ marginTop: "5%" }}>
         <div className="title-wrap">
-          <span >Why Choose Us?</span>
+          <span>Why Choose Us?</span>
           <h2>We Provide</h2>
         </div>
 
         <div className="services-row">
           <div className="services-item">
             <span>
-            <FaMapLocationDot />
+              <FaMapLocationDot />
             </span>
             <h3>Travel Guide</h3>
             <p>

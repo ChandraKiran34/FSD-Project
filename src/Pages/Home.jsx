@@ -39,8 +39,7 @@ function Home() {
         </section>
 
         <Services />
-
-        <Footer />
+            
       </div>
     </div>
   );

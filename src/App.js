@@ -7,6 +7,7 @@ import PlanTour from './Pages/PlanTour';
 import Join from './Pages/Join';
 import Contact from './Pages/Contact';
 import './App.css'
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/join" element={<Join />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
