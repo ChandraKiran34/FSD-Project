@@ -1,10 +1,19 @@
-import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import "../CSS/PlaceCard.css";
+import {motion} from 'framer-motion'
+import { useInView } from "react-intersection-observer";
+const PlaceCard = ({ title, image, spots, state, delay }) => {
 
-const PlaceCard = ({ title, image, spots, state }) => {
+
+  const [ref,inView] = useInView({triggerOnce:true})
+
   return (
-    <div className="place-card">
+    <motion.div
+    initial={{y:100, opacity:0}} 
+    animate={inView ? {y:0, opacity:1} : "hidden"} 
+    ref={ref}
+    transition={{ease:"easeIn",duration: 0.5, delay: delay}}
+     className="place-card">
       <div className="place-image">
         <img src={image} alt={title} />
       </div>
@@ -19,7 +28,7 @@ const PlaceCard = ({ title, image, spots, state }) => {
           <strong> Tourist Spots:</strong> {spots}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

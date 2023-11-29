@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/Home.css";
-// import bg from "../Assets/bg-pic.png";
+
 import places from "./Places";
 import PlaceCard from "./PlaceCard";
-// import logo from "../Assets/logo.jpg";
+
 import Services from "../Components/Services";
-import Footer from "../Components/Footer";
+
 function Home() {
   
   
@@ -34,6 +34,7 @@ function Home() {
               spots={place.spots}
               state={place.state}
               key={place.id}
+              delay={0.1*index}
             />
           ))}
         </section>
