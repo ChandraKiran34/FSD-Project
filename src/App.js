@@ -6,7 +6,7 @@ import About from './Pages/About';
 import PlanTour from './Pages/PlanTour';
 import Join from './Pages/Join';
 import Contact from './Pages/Contact';
-
+import './App.css'
 
 function App() {
   return (

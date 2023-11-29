@@ -7,7 +7,7 @@ import vacation from "../Assets/vacation.jpg";
 function Services() {
   return (
     <div
-      class="container"
+      className="container"
 
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${vacation})`,
@@ -20,13 +20,13 @@ function Services() {
       }}
     >
       <div style={{marginTop:"245px"}}>
-        <div class="title-wrap">
+        <div className="title-wrap">
           <span >Why Choose Us?</span>
           <h2>We Provide</h2>
         </div>
 
-        <div class="services-row">
-          <div class="services-item">
+        <div className="services-row">
+          <div className="services-item">
             <span>
             <FaMapLocationDot />
             </span>
@@ -38,7 +38,7 @@ function Services() {
             </p>
           </div>
 
-          <div class="services-item">
+          <div className="services-item">
             <span>
               <LuHotel />
             </span>
@@ -50,7 +50,7 @@ function Services() {
             </p>
           </div>
 
-          <div class="services-item">
+          <div className="services-item">
             <span>
               <MdOutlinePriceChange />
             </span>

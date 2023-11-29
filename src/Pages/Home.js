@@ -1,47 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/Home.css";
-import bg from "../Assets/bg-pic.png";
+// import bg from "../Assets/bg-pic.png";
 import places from "./Places";
 import PlaceCard from "./PlaceCard";
-import logo from '../Assets/logo.jpg'
+// import logo from "../Assets/logo.jpg";
 import Services from "../Components/Services";
+import Footer from "../Components/Footer";
 function Home() {
+  
+  
+
   return (
-    <div className="home-page">
-      <div className="content">
-        <div className="text-content">
-        <div style={{display:"flex"}}>
-        <span><img src={logo} alt="" width="125px" height="140px" style={{borderRadius:"65px",marginRight:"15px"}}/></span>
-          <h1 style={{ fontSize: "4rem" }}>Pack your Bags</h1>
+    <div>
+      <div className='home-page'>
+        <div className="background-image">
+          <div className="center-content">
+            <h1>Pack Your Bags</h1>
+            <p>Didn't you pack your bags yet?</p>
+            <button className="explore-btn">Explore</button>
+          </div>
         </div>
-          <p style={{ fontWeight: "bold" }}>Didn't you pack yet ?</p>
-          <button className="cta-button">Explore</button>
+
+        <div style={{marginTop:"75px"}}>
+          <h3 style={{color:"#aaa",fontWeight:"200",marginBottom:"50px"}}>KNOW ABOUT SOME PLACES BEFORE YOU TRAVEL</h3>
+          <h2 style={{ color: "black" }}>FEATURED PLACES</h2>
         </div>
-        <div
-          className="image-content"
-          style={{ backgroundImage: `url(${bg})` }}
-        >
-          <div className="image-mask"></div>
-        </div>
+
+        <section className="places">
+          {places.map((place, index) => (
+            <PlaceCard
+              image={place.image}
+              title={place.title}
+              spots={place.spots}
+              state={place.state}
+              key={place.id}
+            />
+          ))}
+        </section>
+
+        <Services />
+
+        <Footer />
       </div>
-
-      <div>
-        <h2 style={{color:"black"}}>FEATURED PLACES</h2>
-      </div>
-
-      <section className="places">
-        {places.map((place, index) => (
-           <PlaceCard image={place.image} title={place.title} spots={place.spots} state={place.state}/>
-
-        ))}
-      </section>
-
-      <Services />
-
-      <section className="call-to-action">
-        <h2>Ready to Get Started?</h2>
-        <button className="cta-button">Sign Up Now</button>
-      </section>
     </div>
   );
 }

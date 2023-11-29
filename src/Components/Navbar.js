@@ -1,15 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/Navbar.css";
-import logo from '../Assets/logo.jpg'
+import logo from "../Assets/logo.jpg";
 const Navbar = () => {
+  const [show, setShow] = useState(false);
+  const controlNavbar = () => {
+    if (window.scrollY > 40) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
   return (
-    <nav style={{display:"flex",alignItems:"center" ,justifyContent:"space-around"}}>
-        
-      <Link to='/' >
-        <h1>Pack <span style={{color:"#00bcd4"}}>Your Bags</span></h1>
+    <nav  className={`nav ${show && 'hidden'}`}>
+      <Link to="/">
+        <h1 className="nav-h1">
+          Pack{" "}
+          <span
+            style={{
+              color: "#2A5AFF",
+              fontWeight: "200",
+              fontSize: "2rem",
+              letterSpacing: "-0.1rem",
+            }}
+          >
+            Your Bags
+          </span>
+        </h1>
       </Link>
-      <ul>
+      <ul className="nav-ul">
         <li>
           <Link to="/">Home</Link>
         </li>
