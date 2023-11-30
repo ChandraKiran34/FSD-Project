@@ -10,7 +10,7 @@
 
 .page-container {
   display: flex;
-  margin-top: 20%;
+  margin-top: 13%;
   margin-left: 10%;
   position: absolute;
 
@@ -60,6 +60,3 @@
   font-size: 1rem;
 }
 
-.box button:hover{
-  opacity:0.8;
-}

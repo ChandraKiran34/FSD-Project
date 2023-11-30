@@ -58,16 +58,28 @@
 
 .contact-cardContainer {
   display: flex;
-  margin: auto;
+  margin-top:0;
   justify-content: center;
   gap: 6rem;
+  margin-bottom:5rem;
 }
 
 .card-contact {
   display: flex;
   /* flex-direction: column; */
-  border: 1px solid #111;
+  /* border: 1px solid #111; */
   padding: 1rem;
   gap:1rem;
   align-items: center;
+}
+
+
+.card-icon {
+  border-radius: 50%;
+  border: 2px solid red;
+  padding: 14px;
+  font-size: 1.5rem;
+  background-color: #2a5aff;
+  border:none;
+  color:white;
 }

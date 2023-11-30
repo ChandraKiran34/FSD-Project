@@ -5,11 +5,13 @@ import Chat from "../Assets/chat.png";
 import { FaPhone } from "react-icons/fa6";
 import { FaRegAddressCard } from "react-icons/fa";
 import { IoMailOpenOutline } from "react-icons/io5";
+import { FaMapLocationDot } from "react-icons/fa6";
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   return (
     <>
+    <h2 style={{display:"flex",justifyContent:"center",marginTop:"1.5rem"}}>GET IN TOUCH WITH US</h2>
       <div className="contact-container">
         <div className="contact-info">
           <img src={Chat} className="contact-image" />
@@ -53,25 +55,38 @@ function Contact() {
       </div>
       <div className="contact-cardContainer">
         <div className="card-contact">
-          <FaPhone />
-          <h4>Email</h4>
-          <p>info@pybbags.com</p>
-        </div>
-        <div className="card-contact">
-          <div style={{ borderRadius: "50%", backgroundColor: "blue" }}>
-            <FaRegAddressCard size="3rem" style={{ backgroundColor: "#fff" }} />
+          <div className="card-icon">
+            <FaPhone />
           </div>
           <div
             style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
           >
             <h4>Mobile</h4>
-            <p>+91 9494339653</p>
+            <p>+91 949-433-9653</p>
           </div>
         </div>
         <div className="card-contact">
-          <IoMailOpenOutline />
-          <h4>Address</h4>
-          <p>IIIT Sricity Room no 316 Andhra Pradesh</p>
+          <div className="card-icon">
+            <FaMapLocationDot />
+          </div>
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+          >
+            <h4>Address</h4>
+            <p>IIIT Sricity,630 Gyan marg </p>
+          </div>
+        </div>
+        <div className="card-contact">
+          <div className="card-icon">
+            <IoMailOpenOutline />
+          </div>
+
+          <div
+            style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+          >
+            <h4>Email</h4>
+            <p>info@pkybags.com</p>
+          </div>
         </div>
       </div>
     </>

@@ -66,6 +66,10 @@
   box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
 }
 
+.hidden .nav-ul a:hover{
+  color:#2A5AFF;
+}
+
 .hidden .nav-ul a{
   color:#000;
 }
