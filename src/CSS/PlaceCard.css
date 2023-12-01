@@ -74,6 +74,7 @@
   opacity: 1; /* Show the spots on hover by changing opacity */
 }
 .icon-place {
+margin-top: 9px;
   margin-right: 5px;
 }
 

@@ -19,7 +19,7 @@ const PlaceCard = ({ title, image, spots, state, delay }) => {
       </div>
       <div className="place-details">
         <h3 className="place-title">
-          <span>
+          <span className="flex ">
             <FaLocationDot className="icon-place" />
             {title},{state}
           </span>

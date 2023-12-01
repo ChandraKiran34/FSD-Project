@@ -40,6 +40,7 @@
   resize: vertical;
   padding: 0.7rem;
   border-radius: 10px;
+  border: 1px solid gray;
 }
 
 .contact-form button {

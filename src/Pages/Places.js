@@ -1,12 +1,12 @@
-import tirupati from '../Assets/tirupati.png'
-import kanyakumari from '../Assets/Kanyakumari.jpg'
-import munnar from '../Assets/Munnar.jpg'
+// import tirupati from '../Assets/tirupati.png'
+// import kanyakumari from '../Assets/Kanyakumari.jpg'
+// import munnar from '../Assets/Munnar.jpg'
 import mussoorie from '../Assets/Mussoorie.jpg'
 import tuticorin from '../Assets/Tuticorin.jpg'
 import hampi from '../Assets/Hampi.jpg'
 import aizawl from '../Assets/Aizawl.jpg'
 import thiruvananthapuram from '../Assets/Thiruvananthapuram.jpg'
-import kohima from '../Assets/Kohima.jpg'
+// import kohima from '../Assets/Kohima.jpg'
 const places = [
     {
       id:1,

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/Navbar.css";
-import logo from "../Assets/logo.jpg";
+// import logo from "../Assets/logo.jpg";
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const controlNavbar = () => {

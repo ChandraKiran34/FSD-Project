@@ -17,7 +17,7 @@ const Join = () => {
           <FaHotel size={60} className="join-icon" />
           <h3>Register as hotel</h3>
           <p>Do you have a Hotel? if your naswer is yes,register your hotel</p>
-          <button>Login</button>
+          <button >Login</button>
         </div>
 
         <div className="box">

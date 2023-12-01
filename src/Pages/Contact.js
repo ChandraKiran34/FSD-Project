@@ -3,7 +3,6 @@ import { useState } from "react";
 import "../CSS/Contact.css";
 import Chat from "../Assets/chat.png";
 import { FaPhone } from "react-icons/fa6";
-import { FaRegAddressCard } from "react-icons/fa";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaMapLocationDot } from "react-icons/fa6";
 function Contact() {
@@ -11,10 +10,10 @@ function Contact() {
   const [email, setEmail] = useState("");
   return (
     <>
-    <h2 style={{display:"flex",justifyContent:"center",marginTop:"1.5rem"}}>GET IN TOUCH WITH US</h2>
+    <h1 className=" text-2xl font-bold" style={{display:"flex",justifyContent:"center",marginTop:"1.5rem"}}>GET IN TOUCH WITH US</h1>1
       <div className="contact-container">
         <div className="contact-info">
-          <img src={Chat} className="contact-image" />
+          <img src={Chat} className="contact-image" alt="communication text"/>
           <div className="contact-form">
             <div>
               <h4>Name</h4>
@@ -38,6 +37,7 @@ function Contact() {
               />
             </div>
 
+    
             <div>
               <h4>Message</h4>
               <textarea

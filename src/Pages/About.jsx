@@ -1,7 +1,7 @@
 import React from 'react';
 import '../CSS/About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faUserTie, faUserTourist, faUserCog } from '@fortawesome/free-solid-svg-icons'; // Import the icons you need
+import { faUser} from '@fortawesome/free-solid-svg-icons'; // Import the icons you need
 import Ab from "../Assets/Ab-pic.png";
 const About = () => {
   // Define information about team members

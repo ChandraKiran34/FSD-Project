@@ -22,22 +22,22 @@ const Footer = () => {
           <h2>Follow us on:</h2>
           <ul className="social-links ">
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href='https://www.iiits.ac.in/'>
                 <FaFacebook  style={{color:"#2175fe"}}/>
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" rel="noopener noreferrer">
+              <a href='https://www.iiits.ac.in/' >
                 <FaXTwitter  style={{backgroundColor:"black",color:"white"}}/>
               </a>
             </li>
             <li>
-              <a >
+              <a href='https://www.iiits.ac.in/'>
                 <FaSquareInstagram style={{color: "rgb(149, 44, 152)"}}/>
               </a>
             </li>
             <li>
-              <a >
+              <a href='https://www.iiits.ac.in/'>
                 <FaYoutube style={{color:"ff0000",}} />
               </a>
             </li>
@@ -47,11 +47,11 @@ const Footer = () => {
         <div className='popular-places'>
           <h2>Popular Places:</h2>
           <ul >
-            <li><a href="#">Ooty</a></li>
-            <li><a href="#">Tirupati</a></li>
-            <li><a href="#">Hyderabad</a></li>
-            <li><a href="#">Kanyakumari</a></li>
-            <li><a href="#">Thiruvananthapuram</a></li>
+            <li><a href='https://www.iiits.ac.in/'>Ooty</a></li>
+            <li><a href='https://www.iiits.ac.in/'>Tirupati</a></li>
+            <li><a href='https://www.iiits.ac.in/'>Hyderabad</a></li>
+            <li><a href='https://www.iiits.ac.in/'>Kanyakumari</a></li>
+            <li><a href='https://www.iiits.ac.in/'>Thiruvananthapuram</a></li>
           </ul>
         </div>
 
