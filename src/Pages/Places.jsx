@@ -20,7 +20,7 @@ const places = [
       id:2,
       title:'Tuticorin',
       state:'kerala',
-      descreption:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
+      description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
       spots:'Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
       image:tuticorin
     },
@@ -28,7 +28,7 @@ const places = [
       id:3,
       title:'Mussoorie',
       state:'Uttarakhand',
-      descreption:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
+      description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
       spots:'Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
       image:mussoorie
     },
@@ -36,7 +36,7 @@ const places = [
       id:4,
       title:'Aizwal',
       state:'Mizoram',
-      descreption:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
+      description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
       spots:'Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
       image:aizawl
     },
@@ -44,7 +44,7 @@ const places = [
       id:5,
       title:'Kanyakumari',
       state:'TamilNadu',
-      descreption:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
+      description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
       spots:'Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
       image:mussoorie
     },
@@ -52,7 +52,7 @@ const places = [
       id:6,
       title:'Thiruvananthapuram',
       state:'Kerala',
-      descreption:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
+      description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
       spots:'Ananta padmanabha swamy temple, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
       image:thiruvananthapuram
     }

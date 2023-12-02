@@ -7,7 +7,6 @@ import vacation from "../Assets/vacation.jpg";
 function Services() {
   return (
     <div
-      className="container"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${vacation})`,
         color: "#fff",
@@ -25,11 +24,11 @@ function Services() {
         </div>
 
         <div className="services-row">
-          <div className="services-item">
+          <div className="services-item ">
             <span>
-              <FaMapLocationDot />
+              <FaMapLocationDot className=" inline"/>
             </span>
-            <h3>Travel Guide</h3>
+            <h3 className="font-bold">Travel Guide</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
               quo, totam repellat velit, dignissimos sequi error a minima
@@ -39,9 +38,9 @@ function Services() {
 
           <div className="services-item">
             <span>
-              <LuHotel />
+              <LuHotel className=" inline"/>
             </span>
-            <h3>Luxurious Hotel</h3>
+            <h3 className="font-bold"> Luxurious Hotel</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
               quo, totam repellat velit, dignissimos sequi error a minima
@@ -51,9 +50,9 @@ function Services() {
 
           <div className="services-item">
             <span>
-              <MdOutlinePriceChange />
+              <MdOutlinePriceChange className=" inline"/>
             </span>
-            <h3>Reasonable Price</h3>
+            <h3 className="font-bold">Reasonable Price</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
               quo, totam repellat velit, dignissimos sequi error a minima

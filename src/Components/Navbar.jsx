@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "../CSS/Navbar.css";
+import classes from "../CSS/Navbar.module.css";
 // import logo from "../Assets/logo.jpg";
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -19,9 +19,9 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <nav  className={`nav ${show && 'hidden'}`}>
+    <nav className={classes.nav + " " + (show && classes.hidden)}>
       <Link to="/">
-        <h1 className="nav-h1">
+        <h1 className={classes["nav-h1"]}>
           Pack{" "}
           <span
             style={{
@@ -35,7 +35,7 @@ const Navbar = () => {
           </span>
         </h1>
       </Link>
-      <ul className="nav-ul">
+      <ul className={classes["nav-ul"]}>
         <li>
           <Link to="/">Home</Link>
         </li>

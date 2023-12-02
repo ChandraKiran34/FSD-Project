@@ -1,3 +1,5 @@
+// App.js
+
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
@@ -8,19 +10,22 @@ import Join from './Pages/Join';
 import Contact from './Pages/Contact';
 import './App.css'
 import Footer from './Components/Footer';
+// import UserDashBoard from './Userboard/UserDashBoard';
+import UserDashBoard from './Userboard/UserDashBoard';
 
 function App() {
   return (
     <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/plantour" element={<PlanTour />} />
-          <Route path="/join" element={<Join />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <Footer />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/plantour" element={<PlanTour />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/userdashboard/*" element={<UserDashBoard />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
