@@ -12,6 +12,7 @@ import './App.css'
 import Footer from './Components/Footer';
 // import UserDashBoard from './Userboard/UserDashBoard';
 import UserDashBoard from './Userboard/UserDashBoard';
+import GuideDashBoard from './Guideboard/GuideDashBoard';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/userdashboard/*" element={<UserDashBoard />} />
+        <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
       </Routes>
       <Footer />
     </Router>
