@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 function HotelUpdate() {
   // Use state to manage form input values
   const [name, setName] = useState('Luxury Inn'); // Default name
+  const [email, setEmail] = useState('luxuryinn@example.com'); // Default email
   const [phoneNumber, setPhoneNumber] = useState('9390464027'); // Default phone number
   const [num_rooms, setRooms] = useState('136')
 
@@ -14,6 +15,7 @@ function HotelUpdate() {
     // Here, you can add logic to update user information
     // For now, let's just log the values to the console
     console.log('Name:', name);
+    console.log('Email:', email);
     console.log('Phone Number:', phoneNumber);
     console.log('No. of Rooms:', num_rooms);
     // You can send this information to your backend or perform other update actions
@@ -36,6 +38,20 @@ function HotelUpdate() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            {/* Email input */}
+            <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
+              <label htmlFor="email" className="font-semibold">Email</label>
+              <input
+                className="border p-2 rounded-md"
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
                 required
               />
             </div>

@@ -15,6 +15,7 @@ import Footer from './Components/Footer';
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
+import AgencyDashBoard from "./Agencyboard/AgencyDashBoard";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/userdashboard/*" element={<UserDashBoard />} />
         <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
         <Route path="/hoteldashboard/*" element={<HotelDashBoard />} />
+        <Route path="/agencydashboard/*" element={<AgencyDashBoard />} />
       </Routes>
       <Footer />
     </Router>

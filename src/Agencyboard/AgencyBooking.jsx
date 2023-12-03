@@ -11,7 +11,7 @@ const bookings = [
     contact: "+91 8093823499",
     startDate: "15-12-2023",
     endDate: "18-12-2023",
-    room: ["502", "503"],
+    vehicle: ["MH 14 CS 9977"],
     image:Hampi // Add the actual image path
   },
   // Add more booking entries as needed
@@ -47,12 +47,12 @@ function UserBooking() {
               <span className="font-semibold">Contact:</span> {booking.contact}
             </p>
             <p className="text-gray-600">
-              <span className="font-semibold">Stay:</span>{" "}
+              <span className="font-semibold">Dates:</span>{" "}
               {booking.startDate+" to "+booking.endDate}
             </p>
             <p className="text-gray-600">
-              <span className="font-semibold">Room No.:</span>{" "}
-              {booking.room.join(", ")}
+              <span className="font-semibold">Vehicle:</span>{" "}
+              {booking.vehicle.join(", ")}
             </p>
           </div>
           <div>
