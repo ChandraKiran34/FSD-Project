@@ -2,21 +2,26 @@ import "../CSS/Home.css";
 
 import places from "./Places";
 import PlaceCard from "./PlaceCard";
+import {Link} from "react-router-dom"
 
 import Services from "../Components/Services";
-
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 function Home() {
   
-  
+
 
   return (
     <div>
+      <Navbar/>
       <div className='home-page'>
         <div className="background-image">
           <div className="center-content">
             <h1>Pack Your Bags</h1>
             <p>Didn't you pack your bags yet?</p>
-            <button className="explore-btn">Explore</button>
+            <div className="mt-[20px]">
+              <Link className="border p-3 rounded-md bg-[#2a5aff] text-white border-none hover:opacity-80 transition ease-in-out duration-700 font-bold text-2xl" to="/plantour">Explore</Link>
+            </div>
           </div>
         </div>
 
@@ -41,6 +46,7 @@ function Home() {
         <Services />
             
       </div>
+      <Footer />
     </div>
   );
 }
