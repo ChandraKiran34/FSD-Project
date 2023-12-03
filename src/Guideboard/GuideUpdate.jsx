@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 function GuideUpdate() {
   // Use state to manage form input values
   const [name, setName] = useState('Manikantha Rayudu'); // Default name
-  const [email, setEmail] = useState('manikantha@example.com'); // Default email
   const [phoneNumber, setPhoneNumber] = useState('8093823499'); // Default phone number
   const [location, setLocation] = useState('city1'); // Default location
   const [language, setLanguage] = useState('Hindi, English, Marathi, Telugu, Tamil')
@@ -16,7 +15,6 @@ function GuideUpdate() {
     // Here, you can add logic to update user information
     // For now, let's just log the values to the console
     console.log('Name:', name);
-    console.log('Email:', email);
     console.log('Phone Number:', phoneNumber);
     console.log('Location:', location);
     console.log('Languages:', language);
@@ -32,7 +30,7 @@ function GuideUpdate() {
           <div>
             {/* Name input */}
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="name">Name</label>
+              <label htmlFor="name" className="font-semibold">Name</label>
               <input
                 className="border p-2 rounded-md"
                 type="text"
@@ -44,22 +42,8 @@ function GuideUpdate() {
               />
             </div>
 
-            {/* Email input */}
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                className="border p-2 rounded-md"
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-
-            <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="phoneNumber">Contact Number</label>
+              <label htmlFor="phoneNumber" className="font-semibold">Contact Number</label>
               <input
                 className="border p-2 rounded-md"
                 type="tel"  // Use type "tel" for phone numbers
@@ -75,7 +59,7 @@ function GuideUpdate() {
           <div>
             {/* Location input */}
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="location">Location:</label>
+              <label htmlFor="location" className="font-semibold">Location:</label>
               <select
                 className="border p-2 rounded-md"
                 id="location"
@@ -93,12 +77,12 @@ function GuideUpdate() {
 
             {/* Languages input */}
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="language">Language</label>
+              <label htmlFor="language" className="font-semibold">Language</label>
               <textarea
                 className="border p-2 rounded-md"
                 id="language"
                 value={language}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setLanguage(e.target.value)}
                 placeholder="Enter languages you speak"
                 required
               />
@@ -107,7 +91,7 @@ function GuideUpdate() {
         </div>
         {/* Submit button */}
         <div className="ml-[22rem] p-3">
-          <button className="border p-3 rounded-md bg-[#2a5aff] text-white border-none hover:opacity-80 transition ease-in-out duration-700" type="submit">Update Profile</button>
+          <button className="border p-3 rounded-md bg-[#4B6F44] text-white border-none hover:opacity-80 transition ease-in-out duration-700 font-semibold" type="submit">Update Profile</button>
         </div>
       </form>
     </div>

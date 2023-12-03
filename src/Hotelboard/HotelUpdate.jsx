@@ -1,13 +1,13 @@
-// GuideUpdate.js
+// HotelUpdate.js
 
 import React, { useState } from 'react';
 
-function GuideUpdate() {
+function HotelUpdate() {
   // Use state to manage form input values
-  const [name, setName] = useState('Chandra Kiran'); // Default name
-  const [phoneNumber, setPhoneNumber] = useState('8093823499'); // Default phone number
-  const [location, setLocation] = useState('city1'); // Default location
-  const [language, setLanguage] = useState('Hindi, Marathi')
+  const [name, setName] = useState('Luxury Inn'); // Default name
+  const [email, setEmail] = useState('luxuryinn@example.com'); // Default email
+  const [phoneNumber, setPhoneNumber] = useState('9390464027'); // Default phone number
+  const [num_rooms, setRooms] = useState('136')
 
   // Function to handle form submission
   const handleSubmit = (e) => {
@@ -15,9 +15,9 @@ function GuideUpdate() {
     // Here, you can add logic to update user information
     // For now, let's just log the values to the console
     console.log('Name:', name);
+    console.log('Email:', email);
     console.log('Phone Number:', phoneNumber);
-    console.log('Location:', location);
-    console.log('Languages:', language);
+    console.log('No. of Rooms:', num_rooms);
     // You can send this information to your backend or perform other update actions
   };
 
@@ -42,6 +42,21 @@ function GuideUpdate() {
               />
             </div>
 
+            {/* Email input */}
+            <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
+              <label htmlFor="email" className="font-semibold">Email</label>
+              <input
+                className="border p-2 rounded-md"
+                type="email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+          </div>
+          <div>
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
               <label htmlFor="phoneNumber" className="font-semibold">Contact Number</label>
               <input
@@ -55,35 +70,17 @@ function GuideUpdate() {
                 required
               />
             </div>
-          </div>
-          <div>
-            {/* Location input */}
+            {/* No of rooms input */}
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="location" className="font-semibold">Location:</label>
-              <select
+              <label htmlFor="num_rooms" className="font-semibold">Total Rooms</label>
+              <input
+                type="number"
                 className="border p-2 rounded-md"
-                id="location"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-                required
-              >
-                <option value="">Select your location</option>
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
-                <option value="city3">City 3</option>
-                {/* Add more options as needed */}
-              </select>
-            </div>
-
-            {/* Languages input */}
-            <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
-              <label htmlFor="language" className="font-semibold">Language</label>
-              <textarea
-                className="border p-2 rounded-md"
-                id="language"
-                value={language}
-                onChange={(e) => setLanguage(e.target.value)}
-                placeholder="Enter languages you speak"
+                id="num_rooms"
+                value={num_rooms}
+                onChange={(e) => setRooms(e.target.value)}
+                placeholder="Enter the number of rooms"
+                min="84"
                 required
               />
             </div>
@@ -91,11 +88,11 @@ function GuideUpdate() {
         </div>
         {/* Submit button */}
         <div className="ml-[22rem] p-3">
-          <button className="border p-3 rounded-md bg-[#2a5aff] text-white border-none hover:opacity-80 transition ease-in-out duration-700" type="submit">Update Profile</button>
+          <button className="border p-3 rounded-md bg-[#4B6F44] text-white border-none hover:opacity-80 transition ease-in-out duration-700" type="submit">Update Profile</button>
         </div>
       </form>
     </div>
   );
 }
 
-export default GuideUpdate;
+export default HotelUpdate;

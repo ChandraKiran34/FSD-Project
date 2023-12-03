@@ -6,6 +6,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { LayoutDashboard } from 'lucide-react';
 import { FaRegCalendarCheck } from 'react-icons/fa6';
 import { FaHeart } from 'react-icons/fa6';
+import { FaEdit } from "react-icons/fa";
 import { RxUpdate } from 'react-icons/rx';
 import { FaHome } from 'react-icons/fa';
 import { FaLongArrowAltRight } from 'react-icons/fa';
@@ -33,12 +34,12 @@ function NavigationBar() {
       path: '/userdashboard/wishlist',
     },
     {
-      name: 'Update Profile',
-      icon: RxUpdate,
+      name: 'Edit',
+      icon: FaEdit,
       path: '/userdashboard/updateprofile',
     },
     {
-      name: 'Back to Home',
+      name: 'Home',
       icon: FaHome,
       path: '/',
     },

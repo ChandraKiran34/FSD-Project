@@ -56,12 +56,12 @@ function UserHome() {
         <div>
           <p className="text-lg font-semibold">{user.name}</p>
           <p className="text-gray-600">{user.email}</p>
-          <p>~~Guide</p>
+          <p>~~Hotel</p>
           {/* Add more user information as needed */}
         </div>
       </div>
       {/* <Link to={`/guidedashboard/updateprofile/${user.id}`} className="mt-4 text-blue-500"></Link> */}
-      <Link to={'/guidedashboard/updateprofile/'} className="mt-4 text-green-700">
+      <Link to={'/hoteldashboard/updateprofile/'} className="mt-4 text-green-700">
       <FaEdit />
       </Link>
       <div>

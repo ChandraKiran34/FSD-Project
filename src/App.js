@@ -13,6 +13,7 @@ import Footer from "./Components/Footer";
 // import UserDashBoard from './Userboard/UserDashBoard';
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
+import HotelDashBoard from "./Hotelboard/HotelDashBoard";
 
 function App() {
   function Root(){
@@ -33,6 +34,7 @@ function App() {
 
         <Route path="/userdashboard/*" element={<UserDashBoard />} />
         <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
+        <Route path="/hoteldashboard/*" element={<HotelDashBoard />} />
       </Routes>
    
     </Router>

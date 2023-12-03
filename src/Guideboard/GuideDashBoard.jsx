@@ -1,21 +1,21 @@
 import React from 'react'
 import NavigationBar from './NavigationBar'
 import { Routes, Route } from 'react-router-dom';
-import UserHome from './GuideHome';
-import UserBooking from './GuideBooking';
-import UserUpdate from './GuideUpdate';
-function UserDashBoard() {
+import GuideHome from './GuideHome';
+import GuideBooking from './GuideBooking';
+import GuideUpdate from './GuideUpdate';
+function GuideDashBoard() {
   return (
     <div className='flex'>
       <NavigationBar />
       <Routes>
-        <Route path="/" element={<UserHome />} />
-        <Route path="bookings" element={<UserBooking />} />
-        <Route path="updateprofile" element={<UserUpdate />} />
+        <Route path="/" element={<GuideHome />} />
+        <Route path="bookings" element={<GuideBooking />} />
+        <Route path="updateprofile" element={<GuideUpdate />} />
         {/* Add more nested routes as needed */}
       </Routes>
     </div>
   )
 }
 
-export default UserDashBoard
+export default GuideDashBoard

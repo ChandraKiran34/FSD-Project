@@ -6,8 +6,8 @@ import { FaUserAlt } from 'react-icons/fa';
 import { LayoutDashboard } from 'lucide-react';
 import { FaRegCalendarCheck } from 'react-icons/fa6';
 import { FaHeart } from 'react-icons/fa6';
-import { FaEdit } from "react-icons/fa";
 import { RxUpdate } from 'react-icons/rx';
+import { FaEdit } from "react-icons/fa";
 import { FaHome } from 'react-icons/fa';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -21,17 +21,17 @@ function NavigationBar() {
     {
       name: 'Dashboard',
       icon: LayoutDashboard,
-      path: '/guidedashboard/',
+      path: '/hoteldashboard/',
     },
     {
       name: 'Bookings',
       icon: FaRegCalendarCheck,
-      path: '/guidedashboard/bookings',
+      path: '/hoteldashboard/bookings',
     },
     {
       name: 'Edit',
       icon: FaEdit,
-      path: '/guidedashboard/updateprofile',
+      path: '/hoteldashboard/updateprofile',
     },
     {
       name: 'Home',
