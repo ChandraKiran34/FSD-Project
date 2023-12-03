@@ -21,6 +21,8 @@ import Footer from "./Components/Footer";
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
 
 const Router = createBrowserRouter([
   {
@@ -59,18 +61,22 @@ const Router = createBrowserRouter([
 
 function App() {
   return (
-    //
-    //
-    //     <Route  />
-    //     <Route path="/plantour" element={<PlanTour />} />
-    //     <Route path="/join" element={<Join />} />
-    //     <Route path="/contact" element={<Contact />} />
-    //     <Route path="/userdashboard/*" element={<UserDashBoard />} />
-    //     <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
-    //     <Route path="/hoteldashboard/*" element={<HotelDashBoard />} />
-    //
-
-    <RouterProvider router={Router} />
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/plantour" element={<PlanTour />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/userdashboard/*" element={<UserDashBoard />} />
+        <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
+        <Route path="/hoteldashboard/*" element={<HotelDashBoard />} />
+       <Route path='/signin' element={<SignIn />} />
+       <Route path='/signup' element={<SignUp />} />
+      </Routes>
+      <Footer />
+    </Router>
   );
 }
 
