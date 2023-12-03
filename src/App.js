@@ -29,6 +29,7 @@ function App() {
           <Route path="plantour" element={<PlanTour />} />
           <Route path="join" element={<Join />} />
           <Route path="contact" element={<Contact />} />
+
         </Route>
 
         <Route path="/userdashboard/*" element={<UserDashBoard />} />

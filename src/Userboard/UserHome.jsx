@@ -45,7 +45,7 @@ function UserHome() {
   ]
 
   return (
-    <div className="bg-white p-4 rounded ">
+    <div className="bg-white p-6 rounded ">
       <h2 className="text-2xl font-semibold mb-4">Welcome, {user.name}!</h2>
 
       <div className="flex items-center space-x-4">
