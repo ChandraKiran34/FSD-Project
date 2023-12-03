@@ -15,6 +15,8 @@ import Footer from './Components/Footer';
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/userdashboard/*" element={<UserDashBoard />} />
         <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
         <Route path="/hoteldashboard/*" element={<HotelDashBoard />} />
+       <Route path='/signin' element={<SignIn />} />
+       <Route path='/signup' element={<SignUp />} />
       </Routes>
       <Footer />
     </Router>

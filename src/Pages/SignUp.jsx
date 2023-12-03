@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../CSS/signin.css'; // Import your CSS file
+import '../CSS/Signin.css'; // Import your CSS file
 import validateForm from './validateForm';
 import { Link } from 'react-router-dom';
 
@@ -66,7 +66,7 @@ const SignUp = () => {
             <h3>If you already have an account, just sign in.</h3>
           </div>
           <div className="btn_2">
-            <Link to={"/login"}>
+            <Link to={"/signin"}>
               <button type="button" className="submit_btn2">
                 Sign In
               </button>

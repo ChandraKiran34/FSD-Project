@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../CSS/signin.css'; // Import your CSS file
+import '../CSS/Signin.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
 
 const SignIn = () => {
