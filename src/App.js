@@ -2,7 +2,6 @@
 
 import React, { Children } from "react";
 import {
-  BrowserRouter,
   Routes,
   Route,
   createBrowserRouter,
@@ -10,19 +9,18 @@ import {
 } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import About from "./Pages/About";
+import About from "./Pages/AboutUs";
 import PlanTour from "./Pages/PlanTour";
 import Join from "./Pages/Join";
 import Contact from "./Pages/Contact";
 import "./App.css";
-import Footer from "./Components/Footer";
-
 // import UserDashBoard from './Userboard/UserDashBoard';
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
+import AboutUs from "./Pages/AboutUs";
 
 const Router = createBrowserRouter([
   {
@@ -31,7 +29,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "/about",
-    element: <About />,
+    element: <AboutUs />,
   },
   {
     path: "/plantour",
@@ -44,6 +42,14 @@ const Router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/signin",
+    element: <SignIn />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path:'/userdashboard/*',
@@ -61,22 +67,7 @@ const Router = createBrowserRouter([
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/plantour" element={<PlanTour />} />
-        <Route path="/join" element={<Join />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/userdashboard/*" element={<UserDashBoard />} />
-        <Route path="/guidedashboard/*" element={<GuideDashBoard />} />
-        <Route path="/hoteldashboard/*" element={<HotelDashBoard />} />
-       <Route path='/signin' element={<SignIn />} />
-       <Route path='/signup' element={<SignUp />} />
-      </Routes>
-      <Footer />
-    </Router>
+   <RouterProvider router={Router}/>
   );
 }
 

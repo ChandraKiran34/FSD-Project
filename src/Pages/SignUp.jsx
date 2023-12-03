@@ -16,8 +16,8 @@ const SignUp = () => {
     email: '',
     phoneNumber: '',
     password: '',
+    confirmPassword:'',
     address: '',
-    favoriteSport: '',
   });
 
   const handleCheckboxChange = () => {
@@ -31,8 +31,7 @@ const SignUp = () => {
       formData.email,
       formData.phoneNumber,
       formData.password,
-      formData.address,
-      formData.favoriteSport
+      formData.address
     );
 
     if (validationError) {
@@ -101,7 +100,7 @@ const SignUp = () => {
               <input
                 className="input_s"
                 type="text"
-                placeholder="Phone number"
+                placeholder="Phone Number"
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleInputChange}
@@ -120,8 +119,27 @@ const SignUp = () => {
                 type="checkbox"
                 name="checkbox"
                 id="check"
-                className="check2"
+                className="check2 mt-8"
                 onChange={handleCheckboxChange}
+                
+              />
+            </label>
+            <label className="label_s">
+              <input
+                className="input_s"
+                type={showPassword ? 'text' : 'password'}
+                placeholder="confirm Password"
+                name="password"
+                value={formData.confirmPassword}
+                onChange={handleInputChange}
+              />
+              <input
+                type="checkbox"
+                name="checkbox"
+                id="check"
+                className="check2 mt-8"
+                onChange={handleCheckboxChange}
+                
               />
             </label>
             <label className="label_s">
@@ -134,16 +152,7 @@ const SignUp = () => {
                 onChange={handleInputChange}
               />
             </label>
-            <label className="label_s">
-              <input
-                className="input_s"
-                type="text"
-                placeholder="Destination spot"
-                name="favoriteSport"
-                value={formData.favoriteSport}
-                onChange={handleInputChange}
-              />
-            </label>
+            
             <button type="submit" className="submit_btn button-30">
               Sign Up
             </button>
