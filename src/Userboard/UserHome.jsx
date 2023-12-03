@@ -8,7 +8,8 @@ import {Link} from 'react-router-dom'
 import { FaEdit } from "react-icons/fa";
 
 function UserHome() {
-  // Assume you have user information, you can replace this with actual data
+  // Assume you have user information, you can replace
+  //  this with actual data
   const user = {
     name: "Chandra Kiran",
     email: "chandra@example.com",
