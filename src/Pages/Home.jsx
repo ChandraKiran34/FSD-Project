@@ -4,13 +4,15 @@ import places from "./Places";
 import PlaceCard from "./PlaceCard";
 
 import Services from "../Components/Services";
-
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 function Home() {
   
   
 
   return (
     <div>
+      <Navbar/>
       <div className='home-page'>
         <div className="background-image">
           <div className="center-content">
@@ -41,6 +43,7 @@ function Home() {
         <Services />
             
       </div>
+      <Footer />
     </div>
   );
 }

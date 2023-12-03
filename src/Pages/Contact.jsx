@@ -5,11 +5,14 @@ import Chat from "../Assets/chat.png";
 import { FaPhone } from "react-icons/fa6";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaMapLocationDot } from "react-icons/fa6";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   return (
     <>
+    <Navbar />
     <h1 className=" text-2xl font-bold" style={{display:"flex",justifyContent:"center",marginTop:"1.5rem"}}>GET IN TOUCH WITH US</h1>1
       <div className="contact-container">
         <div className="contact-info">
@@ -89,6 +92,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
