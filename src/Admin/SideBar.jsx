@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
-import { LayoutDashboard } from "lucide-react";
-import { FaRegCalendarCheck } from "react-icons/fa6";
-import { FaHeart } from "react-icons/fa6";
-import { RxUpdate } from "react-icons/rx";
-import { FaEdit } from "react-icons/fa";
+import { FaUsers } from "react-icons/fa";
+import { RiGuideFill } from "react-icons/ri";
+import { FaHotel } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { LuLogOut } from "react-icons/lu";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { motion } from "framer-motion";
-
+import { FaCar } from "react-icons/fa";
 const Sidebar = ({isExpanded, setIsExpanded}) => {
   const location = useLocation();
   const [activeNavIndex, setActiveNavIndex] = useState(0);
@@ -26,15 +23,25 @@ const Sidebar = ({isExpanded, setIsExpanded}) => {
       path: "/admindashboard/",
     },
     {
-      name: "Users",
-      icon: FaRegCalendarCheck,
+      name: "Travellers",
+      icon: FaUsers,
       path: "/admindashboard/users",
     },
 
     {
       name: "Guides",
-      icon: FaEdit,
-      path: "/admindashboard/products",
+      icon: RiGuideFill,
+      path: "/admindashboard/guides",
+    },
+    {
+      name: "Hotels",
+      icon: FaHotel,
+      path: "/admindashboard/hotels",
+    },
+    {
+      name: "Agencies",
+      icon: FaCar,
+      path: "/admindashboard/agencies",
     },
     {
       name: "Logout",
@@ -47,7 +54,7 @@ const Sidebar = ({isExpanded, setIsExpanded}) => {
       animate={isExpanded ? "expanded" : "nonExpanded"}
       variants={variants}
       className={
-        "px-10 py-12 flex flex-col bg-[#ce9178] text-white border border-r-1 w-[33vw]  relative h-screen" +
+        "px-10 py-12 flex flex-col bg-[#ce9178] text-white border border-r-1 w-[33vw] relative min-h-screen" +
         (isExpanded ? " px-10" : " px-2")
       }
     >
@@ -57,7 +64,7 @@ const Sidebar = ({isExpanded, setIsExpanded}) => {
       </div> */}
       <div
         onClick={() => setIsExpanded(!isExpanded)}
-        className="w-5 h-5 bg-[#302300] rounded-full absolute -right-[10.5px] top-12 flex justify-center items-center cursor-pointer"
+        className="w-5 h-5 bg-[#302300] rounded-full absolute -right-[10.5px] top-12 flex justify-center items-center cursor-pointer "
       >
         <FaLongArrowAltRight className="text-white w-4 " />
       </div>

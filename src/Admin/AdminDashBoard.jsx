@@ -1,10 +1,13 @@
 import {useState} from "react";
 import { Routes, Route } from "react-router-dom";
 import AdminUser from "./AdminUser";
-import AdminProducts from "./AdminProducts";
 import Home from "../Pages/Home";
 import SideBar from "./SideBar";
 import AdminHome from "./AdminHome";
+import AdminBookingList from "./AdminBookingList";
+import AdminGuides from "./AdminGuides";
+import AdminAgency from "./AdminAgencies";
+import AdminHotels from "./AdminHotels";
 function AdminDashBoard() {
   const [expanded, setExpanded] = useState(true);
   return (
@@ -14,7 +17,9 @@ function AdminDashBoard() {
         <Routes>
           <Route path="/" element={<AdminHome />}></Route>
           <Route path="users" element={<AdminUser />} />
-          <Route path="bookings" element={<AdminProducts />} />
+          <Route path="guides" element={<AdminGuides/>} />
+          <Route path="hotels" element={<AdminHotels/>} />
+          <Route path="agencies" element={<AdminAgency/>} />
           <Route path="logout" element={<Home />} />
         </Routes>
       </div>
