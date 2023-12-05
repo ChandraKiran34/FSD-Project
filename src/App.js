@@ -1,5 +1,4 @@
 // App.js
-
 import React, { Children } from "react";
 import {
   Routes,
@@ -14,13 +13,13 @@ import PlanTour from "./Pages/PlanTour";
 import Join from "./Pages/Join";
 import Contact from "./Pages/Contact";
 import "./App.css";
-// import UserDashBoard from './Userboard/UserDashBoard';
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import AboutUs from "./Pages/AboutUs";
+import AdminDashBoard from "./Admin/AdminDashBoard";
 
 const Router = createBrowserRouter([
   {
@@ -62,6 +61,10 @@ const Router = createBrowserRouter([
   {
     path:'/hoteldashboard/*',
     element:<HotelDashBoard />
+  },
+  {
+    path:'/admindashboard/*',
+    element:<AdminDashBoard />
   }
 ]);
 
@@ -73,23 +76,4 @@ function App() {
 
 export default App;
 
-{
-  /* <Route path="/" element={<Root />}>
-      <Route path="/" element={<Home />}>
-        <Route index element={<HomePage />} />
-        <Route path="faqs" element={<Faqs />} />
-        <Route path="aboutus" element={<AboutUs />} />
-        <Route path="contactus" element={<ContactUs_Home />} />
-      </Route>
-      <Route path="/login" element={<Login_SignUp />} />
 
-      <Route path="/jobseeker" element={<JobSeeker />}>
-        <Route index element={<JLanding />} />
-        <Route path="findjobs" element={<FindJobs />} />
-        <Route path="contactus" element={<ContactUs />} />
-        <Route path="profile" element={<Profile_Job />} />
-      </Route>
-
-      <Route path="/company" element={<Company />} />
-    </Route> */
-}

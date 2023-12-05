@@ -17,7 +17,7 @@ const AboutUsCards = () => {
       description: 'Abhinav Mars contributes his expertise as a valuable member of the team...',
     },
     {
-      name: 'Manikanta Rayudu',
+      name: 'Manikantha Rayudu',
       role: 'Member',
       description: 'Manikanta Rayudu brings extensive experience and skills to the team...',
     },
@@ -41,7 +41,7 @@ const AboutUsCards = () => {
 
         
         {teamMembers.map((member, index) => (
-          <div key={index} className="team-member">
+          <div key={index} className="team-member hover:shadow-lg">
             <FontAwesomeIcon icon={faUser} className="team-member-icon" />
             <h3>{member.name}</h3>
             <p>{member.role}</p>
