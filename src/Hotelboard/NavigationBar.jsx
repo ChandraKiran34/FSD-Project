@@ -12,10 +12,10 @@ import { FaHome } from 'react-icons/fa';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-function NavigationBar() {
+function NavigationBar({isExpanded, setIsExpanded}) {
   const location = useLocation();
   const [activeNavIndex, setActiveNavIndex] = useState(0);
-  const [isExpanded, setIsExpanded] = useState(true);
+  // const [isExpanded, setIsExpanded] = useState(true);
 
   const navLinks = [
     {
@@ -41,8 +41,8 @@ function NavigationBar() {
   ];
 
   const variants = {
-    expanded: { width: '20%'},
-    nonExpanded: { width: '5%'},
+    expanded: { width: '15vw'},
+    nonExpanded: { width: '5vw'},
   };
 
   return (
