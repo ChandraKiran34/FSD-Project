@@ -41,7 +41,7 @@ const AboutUsCards = () => {
 
         
         {teamMembers.map((member, index) => (
-          <div key={index} className="team-member">
+          <div key={index} className="team-member hover:shadow-lg">
             <FontAwesomeIcon icon={faUser} className="team-member-icon" />
             <h3>{member.name}</h3>
             <p>{member.role}</p>
