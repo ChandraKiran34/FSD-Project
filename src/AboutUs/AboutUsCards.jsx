@@ -19,7 +19,7 @@ const AboutUsCards = () => {
     {
       name: 'Manikantha Rayudu',
       role: 'Member',
-      description: 'Manikanta Rayudu brings extensive experience and skills to the team...',
+      description: 'Manikantha Rayudu brings extensive experience and skills to the team...',
     },
     {
       name: 'S V S Apparao',
