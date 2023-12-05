@@ -9,7 +9,7 @@ function AdminHome() {
       <h1 className="font-bold text-3xl pb-3 mt-5 ">Welcome Admin,</h1>
       <h2 className="text-xl">Customer Analytics :</h2>
       <div className="flex mt-[2rem]">
-        <div className="border flex items-center  p-1 justify-center flex-col gap-2 hover:shadow-lg">
+        <div className="border flex items-center  p-4 justify-center flex-col gap-2 hover:shadow-lg">
           <img src={some} alt="people" className="w-[20%] " />
           <h1 className="font-bold"> Users </h1>
           <p>7</p>
