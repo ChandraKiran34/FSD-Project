@@ -64,6 +64,10 @@ const Router = createBrowserRouter([
     element:<HotelDashBoard />
   },
   {
+    path:'/agencydashboard/*',
+    element:<AgencyDashBoard />
+  },
+  {
     path:'/admindashboard/*',
     element:<AdminDashBoard />
   }
