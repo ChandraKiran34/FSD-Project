@@ -18,6 +18,7 @@ import "./App.css";
 import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
+import AgencyDashBoard from "./Agencyboard/AgencyDashBoard";
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import AboutUs from "./Pages/AboutUs";
@@ -62,6 +63,10 @@ const Router = createBrowserRouter([
   {
     path:'/hoteldashboard/*',
     element:<HotelDashBoard />
+  },
+  {
+    path:'/agencydashboard/*',
+    element:<AgencyDashBoard />
   }
 ]);
 
