@@ -24,7 +24,7 @@
 }
 
 .featured-row {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
@@ -82,7 +82,7 @@
   color: #555;
 }
 
-html {
+/* html {
   box-sizing: border-box;
   font-size: 100%;
 }
@@ -94,7 +94,7 @@ body {
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
+} */
 
 .featured-row {
   display: flex;

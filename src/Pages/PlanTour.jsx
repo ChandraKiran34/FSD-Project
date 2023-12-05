@@ -3,7 +3,9 @@ import axios from "axios";
 import "../CSS/PlanTour.css";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-
+import { MdLocationOn } from "react-icons/md";
+import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
 const PlanTour = () => {
   const [productData, setProductData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -36,28 +38,29 @@ const PlanTour = () => {
   return (
     <>
       <Navbar />
-      <section id="featured" className="py-4">
+      <section id="featured">
         <div class="container">
           <div class="title-wrap">
             <span class="sm-title">
               know about some places before your travel
             </span>
-            <h2>Choose your Travel location:</h2>
+            <h2 className="font-semibold text-xl mt-1">Choose your Travel location:</h2>
           </div>
           <input
-            className="search_1"
+            className="border  p-5 w-[60vh] ml-[23.5rem] mb-7 border-black rounded"
             type="text"
-            placeholder="Search by product name"
+            placeholder="Search by place name"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <div className="featured-row">
             {filteredProducts.map((product) => (
-              <div key={product.id} className="card-hover">
+              <div key={product.id} className="card-hover w-[10vh] p-5">
                 {/* Add your content for each place here */}
-                <img className="image" src={product.image} alt={product.name} />
-                <p> {product.name}</p>
-                <p>{product.desc}</p>
+                <FaHeart className="absolute ml-[21rem] mt-[10px] text-[#fc5252]"/>
+                <img className="image ml-5 rounded object-fill h-98 w-96" src={product.image} alt={product.name}  />
+                <p className="ml-5 mt-5 font-bold flex"><MdLocationOn className="mt-1"/> {product.name}</p>
+                <p className="ml-5 mt-5 text-justify">{product.desc}</p>
               </div>
             ))}
           </div>

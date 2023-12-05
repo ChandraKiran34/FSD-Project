@@ -8,6 +8,7 @@ import AdminBookingList from "./AdminBookingList";
 import AdminGuides from "./AdminGuides";
 import AdminAgency from "./AdminAgencies";
 import AdminHotels from "./AdminHotels";
+import AdminReviews from "./AdminReviews";
 function AdminDashBoard() {
   const [expanded, setExpanded] = useState(true);
   return (
@@ -20,6 +21,7 @@ function AdminDashBoard() {
           <Route path="guides" element={<AdminGuides/>} />
           <Route path="hotels" element={<AdminHotels/>} />
           <Route path="agencies" element={<AdminAgency/>} />
+          <Route path="reviews" element={<AdminReviews/>} />
           <Route path="logout" element={<Home />} />
         </Routes>
       </div>

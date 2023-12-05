@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../CSS/Signin.css'; // Import your CSS file
 import { Link } from 'react-router-dom';
-
+import { IoArrowBack } from "react-icons/io5";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,6 +18,7 @@ const SignIn = () => {
 
   return (
     <div className="sign_body">
+     <Link to='/'> <IoArrowBack  className='absolute mt-5 ml-5 font-bold text-4xl text-white bg-black  rounded-3xl' /></Link>
       <div className='signuppage_card'>
       </div>
 

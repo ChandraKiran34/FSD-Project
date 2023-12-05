@@ -44,6 +44,11 @@ const Sidebar = ({isExpanded, setIsExpanded}) => {
       path: "/admindashboard/agencies",
     },
     {
+      name: "reviews",
+      icon: FaCar,
+      path: "/admindashboard/reviews",
+    },
+    {
       name: "Logout",
       icon: LuLogOut,
       path: "/",
