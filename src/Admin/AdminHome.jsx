@@ -12,7 +12,7 @@ function AdminHome() {
       <div className="flex mt-[1rem]">
         <div className="border flex items-center  p-1 justify-center flex-col gap-2 hover:shadow-lg">
           <img src={some} alt="people" className="w-[20%] " />
-          <h1 className="font-bold"> Users </h1>
+          <h1 className="font-bold"> Travellers </h1>
           <p>7</p>
         </div>
         <div className="border flex items-center justify-center flex-col gap-2 hover:shadow-lg">
