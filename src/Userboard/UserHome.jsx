@@ -1,48 +1,56 @@
 // UserHome.js
 
-import React from "react";
-import mussoorie from '../Assets/Mussoorie.jpg'
-import tuticorin from '../Assets/Tuticorin.jpg'
-import hampi from '../Assets/Hampi.jpg'
-import {Link} from 'react-router-dom'
+import React, { useState } from "react";
+import mussoorie from "../Assets/Mussoorie.jpg";
+import tuticorin from "../Assets/Tuticorin.jpg";
+import hampi from "../Assets/Hampi.jpg";
+import { Link } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
-
+import { useSelector } from "react-redux";
 function UserHome() {
   // Assume you have user information, you can replace
   //  this with actual data
-  const user = {
-    name: "Chandra Kiran",
-    email: "chandra@example.com",
-    // Add more user details as needed
-  };
+  const userData = useSelector((state) => state.user.data);
+
+  console.log(userData);
+
+  const [user, setUsers] = useState({
+    name: userData?.name,
+    email: userData?.email,
+  });
 
   const topRatedPlaces = [
     {
-        id:1,
-        title: 'Hampi',
-        state:'Karnataka',
-        description: 'Residing place of the almighty Lord venkateswara an extremely nice place to have a spiritual experience with god ',
-        spots:'Venkateswara swamy temple,varaha swamy temple,akasha ganga,zoo,Alipiri museum',
-        image: hampi
-      },
-      {
-        id:2,
-        title:'Tuticorin',
-        state:'kerala',
-        description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
-        spots:'Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
-        image:tuticorin
-      },
-      {
-        id:3,
-        title:'Mussoorie',
-        state:'Uttarakhand',
-        description:'Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers',
-        spots:'Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam',
-        image:mussoorie
-      }
-  
-  ]
+      id: 1,
+      title: "Hampi",
+      state: "Karnataka",
+      description:
+        "Residing place of the almighty Lord venkateswara an extremely nice place to have a spiritual experience with god ",
+      spots:
+        "Venkateswara swamy temple,varaha swamy temple,akasha ganga,zoo,Alipiri museum",
+      image: hampi,
+    },
+    {
+      id: 2,
+      title: "Tuticorin",
+      state: "kerala",
+      description:
+        "Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers",
+      spots:
+        "Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam",
+      image: tuticorin,
+    },
+    {
+      id: 3,
+      title: "Mussoorie",
+      state: "Uttarakhand",
+      description:
+        "Famous for being one of the most exotic places to visit in Tamil Nadu, Kanyakumari is a paradise for experience-seekers",
+      spots:
+        "Vivekananda Rock Memorial, Kanyakumari Beach, Sarvani Shaktipeeth Shri Bhagavathy Temple, Mahatma Gandhi Mandapam",
+      image: mussoorie,
+    },
+  ];
 
   return (
     <div className="bg-white p-6 rounded ">
@@ -62,8 +70,8 @@ function UserHome() {
         </div>
       </div>
       {/* <Link to={`/userdashboard/updateprofile/${user.id}`} className="mt-4 text-blue-500"></Link> */}
-      <Link to={'/userdashboard/updateprofile/'} className="mt-4 text-blue-500">
-      <FaEdit />
+      <Link to={"/userdashboard/updateprofile/"} className="mt-4 text-blue-500">
+        <FaEdit />
       </Link>
       <div>
         <h3 className="text-xl font-bold mt-9 mb-4">Top Rated Places</h3>
@@ -71,10 +79,7 @@ function UserHome() {
           {topRatedPlaces.map((place, index) => (
             <div key={index} className="bg-gray-100 p-4 rounded shadow">
               {/* Place Image */}
-              <img
-                src = {place.image}
-                className="mb-2 rounded-md"
-              />
+              <img src={place.image} className="mb-2 rounded-md" />
 
               {/* Place Details */}
               <h4 className="text-lg font-bold mb-2">{place.title}</h4>

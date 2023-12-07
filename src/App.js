@@ -17,10 +17,14 @@ import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
 import AgencyDashBoard from "./Agencyboard/AgencyDashBoard";
-import SignIn from './Pages/SignIn';
-import SignUp from './Pages/SignUp';
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 import AboutUs from "./Pages/AboutUs";
 import AdminDashBoard from "./Admin/AdminDashBoard";
+import { AuthContexts } from "./FireBase/AuthContexts";
+
+import PrivateRoute from "./PrivateRoutes/PrivateRoute";
+import PlaceDescreption from "./Pages/PlaceDescription";
 
 const Router = createBrowserRouter([
   {
@@ -37,7 +41,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "/join",
-    element: <Join/>,
+    element: <Join />,
   },
   {
     path: "/contact",
@@ -52,33 +56,45 @@ const Router = createBrowserRouter([
     element: <SignUp />,
   },
   {
-    path:'/userdashboard/*',
-    element:<UserDashBoard />
+    path: "/userdashboard/*",
+    element: (
+      <PrivateRoute role={"user"}>
+        <UserDashBoard />
+      </PrivateRoute>
+    ),
   },
   {
-    path:'/guidedashboard/*',
-    element:<GuideDashBoard />
+    path: "/guidedashboard/*",
+    element: <GuideDashBoard />,
   },
   {
-    path:'/hoteldashboard/*',
-    element:<HotelDashBoard />
+    path: "/hoteldashboard/*",
+    element: <HotelDashBoard />,
   },
   {
-    path:'/agencydashboard/*',
-    element:<AgencyDashBoard />
+    path: "/agencydashboard/*",
+    element: <AgencyDashBoard />,
   },
   {
-    path:'/admindashboard/*',
-    element:<AdminDashBoard />
+    path: "/admindashboard/*",
+    element: <AdminDashBoard />,
+  },
+  {
+    path: "/placedesc",
+    element: <PlaceDescreption />,
+  },
+  {
+    path:"/place/:id/:name", // Use :id as a parameter in the path
+    element: <PlaceDescreption />,
   }
 ]);
 
 function App() {
   return (
-   <RouterProvider router={Router}/>
+    <AuthContexts>
+      <RouterProvider router={Router} />
+    </AuthContexts>
   );
 }
 
 export default App;
-
-
