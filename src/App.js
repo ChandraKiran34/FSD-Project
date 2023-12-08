@@ -19,6 +19,9 @@ import HotelDashBoard from "./Hotelboard/HotelDashBoard";
 import AgencyDashBoard from "./Agencyboard/AgencyDashBoard";
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
+import GuideRegister from './Pages/GuideRegister';
+import HotelRegister from './Pages/HotelRegister';
+import AgencyRegister from './Pages/HotelRegister';
 import AboutUs from "./Pages/AboutUs";
 import AdminDashBoard from "./Admin/AdminDashBoard";
 
@@ -70,6 +73,18 @@ const Router = createBrowserRouter([
   {
     path:'/admindashboard/*',
     element:<AdminDashBoard />
+  },
+  {
+    path:'/guideregister',
+    element:<GuideRegister />
+  },
+  {
+    path:'/hotelregister',
+    element:<HotelRegister />
+  },
+  {
+    path:'/agencyregister',
+    element:<AgencyRegister />
   }
 ]);
 
