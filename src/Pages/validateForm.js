@@ -34,34 +34,61 @@ const isValidEmail = (email) => {
     return address.length >= 12;
   };
   
-  const validateForm = (name, email, phoneNumber, password, address, favoriteSport) => {
-    if (!name || !email || !phoneNumber || !password || !address || !favoriteSport) {
-      return "All fields are required.";
+  const validateForm = (name, email, phoneNumber, password, address) => {
+    // if (!name || !email || !phoneNumber || !password || !address || !favoriteSport) {
+    //   return "All fields are required.";
+    // }
+
+    if(!name){
+      alert("Name is required")
+      return "Name is required"
+    }
+
+    if(!email)
+    {
+      alert("Email is required")
+      return "email is required"
+    }
+    if(!phoneNumber)
+    {
+      alert("phoneNumber is required")
+      return "phoneNumber is required"
+    }
+    if(!password)
+    {
+      alert("Password is required")
+      return "Password is required"
+    }
+    if(!address)
+    {
+      alert("Address is required")
+      return "Address is required"
     }
   
     if (!isValidName(name)) {
+      alert("Name must start with an alphabet and not contain special characters.")
       return "Name must start with an alphabet and not contain special characters.";
     }
   
     if (!isValidEmail(email)) {
+      alert("Invalid email address")
       return "Invalid email address.";
     }
   
     if (!isValidPhoneNumber(phoneNumber)) {
+      alert("Invalid phone number")
       return "Invalid phone number.";
     }
   
     if (!isValidPassword(password)) {
-      return "Password must be at least 6 characters long and contain one special character, one digit, and one alphabet.";
+      alert("Password must be at l east 6 characters long and contain one special character, one digit, and one alphabet.")
+      return "Password must be at l east 6 characters long and contain one special character, one digit, and one alphabet.";
     }
   
     if (!isValidAddress(address)) {
+      alert("Address must be at least 12 characters long.")
       return "Address must be at least 12 characters long.";
     }
-    if (!isValidsport(favoriteSport)) {
-        return "Provide exact sport name";
-      }
-  
     return null; // No validation error
   };
   

@@ -2,7 +2,7 @@
     "Placedesc":[
         {
             "id": 1,
-            "name": "Udaipur",
+            "name": "Udaipur, Rajasthan",
             "category": "Rajasthan",
             "content": "Udaipur, also known as the City of Lakes, is one of the most visited tourist places in Rajasthan. Located around stunning water lakes and enveloped by the Aravalli Hills in all directions, Udaipur is known for its azure lakes, magnificent palaces, vibrant culture and delectable food. Along with being a must-visit destination, it is also one of the best places to experience luxury in India.",
             "visit": "Lake Pichola, City palace of Udaipur, Bagore Ki Haveli Museum, Sajjangarh Palace, Jag Mandir Palace",
@@ -13,7 +13,7 @@
         },
         {
             "id": 2,
-            "name": "Jaipur",
+            "name": "Jaipur, Rajasthan",
             "category": "Rajasthan",
             "content": "Also called the Pink City, Jaipur is the capital of the royal state of Rajasthan. Along with Delhi and Agra, Jaipur forms the Golden Triangle and hails as one of the most famous tourist circuits in the country.",
             "visit": "Amber Palace, Hawa Mahal, Jantar Mantar, Nahargarh Fort, Birla Temple, Jaigarh Fort",
@@ -24,7 +24,7 @@
         },
         {
             "id": 3,
-            "name": "Jaisalmer",
+            "name": "Jaisalmer, Rajasthan",
             "category": "Rajasthan",
             "content": "Jaisalmer is a prominent tourist spot located in the northwestern state of Rajasthan in India. It is known as the \"golden city\" due to its golden dunes and castles clad in golden honey sandstone. Jaisalmer is adorned with lakes, ornate Jain temples and havelis. Climb onto the camel saddle and make your way through this desert to camp under the starry night sky for an unforgettable experience",
             "visit": "Jaisalmer Fort, Longewala war memorial, Bada Bagh, Kuldhara, Gadisar Lake",
@@ -35,7 +35,7 @@
         },
         {
             "id": 4,
-            "name": "Shimla",
+            "name": "Shimla, Himachal Pradesh",
             "category": "Himachal Pradesh",
             "content": "Shimla is the capital of Himachal Pradesh and a popular hill-station among Indian families and honeymooners. Situated at the height of 2200m, Shimla was the summer capital of British India. Shimla still retains its old-world charm with beautiful colonial architecture, pedestrian-friendly Mall road and the ridge lined up with multiple shops, cafes and restaurants.",
             "visit": "Viceregal lodge, The Glen, Lakkar Bazaar, Kufri, Green Valley, The Ridge",
@@ -46,7 +46,7 @@
         },
         {
             "id": 5,
-            "name": "Manali",
+            "name": "Manali, Himachal Pradesh",
             "category": "Himachal Pradesh",
             "content": "Manali is a town, near Kullu town in Kullu district in the Indian state of Himachal Pradesh. It is situated in the northern end of the Kullu Valley, formed by the Beas River.",
             "visit": "Solang Valley, Bhrigu Lake, Naggar Castle, Chanderkhani Pass",
@@ -57,7 +57,7 @@
         },
         {
             "id": 6,
-            "name": "Srinagar",
+            "name": "Srinagar, Jammu and Kashmir",
             "category": "Jammu and Kashmir",
             "content": "The quintessential hill station of Srinagar lies on the banks of Jhelum, a tributary of the river Indus, and Dal and Anchar lakes. Being one of the most popular tourist destinations in the country, Srinagar is visited by a swarm of travelers every year and the Srinagar tour packages facilitate them to enjoy tourist attractions, tasty food, and a good shopping experience at pocket-friendly rates",
             "visit": "Dal Lake, Shankaracharya Hill, Indira Gandhi Tulip Garden, Sonamarg, Nigeen Lake, Betab Valley",
@@ -68,7 +68,7 @@
         },
         {
             "id": 7,
-            "name": "Leh",
+            "name": "Leh, Jammu and Kashmir",
             "category": "Jammu and Kashmir",
             "content": "Leh is the joint capital and largest city of the union territory of Ladakh in India. Leh, located in the Leh district, was also the historical capital of the Kingdom of Ladakh, the seat of which was in the Leh Palace, the former residence of the royal family of Ladakh, built in the same style and about the same time as the Potala Palace in Tibet",
             "visit": "Pangong Tso, Thiksey Monastrey, Shanti Stupa, Magnetic Hill, Tanglang La, Spituk Monastery, Sand Dunes Leisure Park",
@@ -79,7 +79,7 @@
         },
         {
             "id": 8,
-            "name": "Gulmarg",
+            "name": "Gulmarg, Jammu and Kashmir",
             "category": "Jammu and Kashmir",
             "content": "Situated at an altitude of 2730 m above sea level, Gulmarg is a popular skiing destination located in Pir Panjal Range of Union territory of Jammu and Kashmir. Surrounded by snow-covered lofty Himalayas, meadows of flowers, deep ravines, evergreen forested valleys, Gulmarg also has the worlds second highest Gondola ride.",
             "visit": "Gulmarg Gondola, Apharwat peak, Ningle Nallah, Alpather Lake, Rani Temple Kongdori, Gulmarg Backcountry",
@@ -90,7 +90,7 @@
         },
         {
             "id": 9,
-            "name": "Amritsar",
+            "name": "Amritsar, Punjab",
             "category": "Punjab",
             "content": "The city known for legends, patriotism, and spirituality, Amritsar is found listed at the top when anyone talks about the religious places to visit in Punjab. Home to the Golden temple, or Sri Harmandir Sahib, this is among the most significant pilgrimage site for Sikhs. The narrow lanes of Amritsar are arrayed with shops selling colorful juttis, suits and more. A foodie cannot have enough of Amritsari Kulche, Butter Chicken, Lassi  the list is long!",
             "visit": "Golden Temple, Jallianwala Bagh, Akal Takht, Maharaja Ranjit Singh Statue, Gobindgarh Fort, Tarn Taran Sahib, The Partition Museum",
@@ -101,7 +101,7 @@
         },
         {
             "id": 10,
-            "name": "Jalandhar",
+            "name": "Jalandhar, Punjab",
             "category": "Punjab",
             "content": "Flaunting the culture of Punjab, Jalandhar is a name that can never be forgotten in a list of best places to visit in Punjab. This is an ancient city, holding special significance for not just Sikhs but also Hindus as it is home to many holy shrines. From street shopping to popping tags in showrooms, Jalandhar has so much on offer.",
             "visit": "Pushpa Gujral Science City, Shaheed-E-Azam Museum, Devi Talab Mandir Temple, Wonderland Theme Park, Jang-E-Azadi Memorial",
@@ -112,7 +112,7 @@
         },
         {
             "id": 11,
-            "name": "Chandigarh",
+            "name": "Chandigarh, Punjab",
             "category": "Punjab",
             "content": "Capital of Punjab, Chandigarh is counted among the metro cities of India and among the top places to visit in Punjab. This welcoming city will greet you with the flavors of everything between modernity and antiquity. Chandigarh also is one of the cleanest cities in the country, where one can spend time shopping in the mall, lounging at a cafe or unwinding by a lake or garden.",
             "visit": "Rock Garden, Sukhna Lake, Zakir Hussain Rose Garden, International Dolls Museum, Pinjore Garden",
@@ -123,7 +123,7 @@
         },
         {
             "id": 12,
-            "name": "Mumbai",
+            "name": "Mumbai, Maharashtra",
             "category": "Maharashtra",
             "content": "Mumbai, the capital city of the Indian state of Maharashtra, is a spectacular paradox of chaos and hope, glamour and squalor, modernity and tradition. Famously known as the City of Dreams, Mumbai – formerly known as Bombay - Mumbai is a beautifully blended melting pot of cultures and lifestyles",
             "visit": "Elephanta caves, Marine Drive, Juhu beach, Gateway of India, Film City, Mumbai Zoo, Essel World",
@@ -134,7 +134,7 @@
         },
         {
             "id": 13,
-            "name": "Mahabaleshwar",
+            "name": "Mahabaleshwar, Maharashtra",
             "category": "Maharashtra",
             "content": "Mahabaleshwar is a hill station located in the Western Ghats, in Satara district of Maharashtra. Apart from its strawberries, Mahabaleshwar is also well known for its numerous rivers, magnificent cascades and majestic peaks. It is among the most sought after weekend getaways from Pune & Mumbai, located about 120km south-west of Pune and 285km from Mumbai.",
             "visit": "Elephants head point, Dhobi waterfall, Arthurs seat, Venna Lake, Wilson Point, Chinamans Waterfall, Mahabaleshwar Temple",
@@ -145,7 +145,7 @@
         },
         {
             "id": 14,
-            "name": "Aurangabad",
+            "name": "Aurangabad, Maharashtra",
             "category": "Maharashtra",
             "content": "Aurangabad, which was declared by the Government as the Tourism Capital of Maharashtra back in 2010, is a famous tourist hub which greets its visitors with a richly woven tapestry of sights and sounds. The city got its name for being the erstwhile capital of Mughal Emperor Aurangzeb in the 17th century AD. The town is used as the base to explore the extremely famous caves of Ajanta and Ellora, Daulatabad Fort which is renowned for its strong defence systems,",
             "visit": "Grishneshwar Temple, Bibi ka Maqbara, Ajanta Caves, Ellora Caves, Daulatabad fort, Siddhartha Garden",
@@ -156,7 +156,7 @@
         },
         {
             "id": 15,
-            "name": "Khajuraho",
+            "name": "Khajuraho, Madhya Pradesh",
             "category": "Madhya Pradesh",
             "content": "Khajuraho, a UNESCO World Heritage Site located in Madhya Pradesh, is known around the world for its stunning temples adorned by erotic and sensuous carvings. A small town located in the Bundelkhand region, Khajuraho is a brilliant example of Indian architecture and its culture back in the medieval period.",
             "visit": "Dulhadev Temple, Light and Sound show, Vishwanath temple, Raneh Falls",
@@ -167,7 +167,7 @@
         },
         {
             "id": 16,
-            "name": "Gwalior",
+            "name": "Gwalior, Madhya Pradesh",
             "category": "Madhya Pradesh",
             "content": "Gwalior is a historic city located in the state of Madhya Pradesh. Popular because of the hilltop fort, Gwalior is full of palaces and glorious temples giving this city a majestic charm which speaks volumes of its glorious past.",
             "visit": "Gwalior Fort, Jai Vilas Palace, Gujari Mahal, Tomb of Tansen, Gwalior Zoo, Sun Temple",
@@ -178,7 +178,7 @@
         },
         {
             "id": 17,
-            "name": "Agra",
+            "name": "Agra, Uttar Pradesh",
             "category": "Uttar Pradesh",
             "content": "Located on the banks of River Yamuna in Uttar Pradesh, Agra is a popular tourist destination as it is home to one of the 7 wonders of the world, the Taj mahal. It is a sneak peek into the architectural history and legacy of the Mughal empire with two other UNESCO World Heritage Sites Agra Fort and Fatehpur Sikri.",
             "visit": "Taj Mahal, Agra Fort, Fatehpur Sikri, Mehtab Bagh, Akbars Tomb, Jama Masjid, Jhangir Mahal",
@@ -189,7 +189,7 @@
         },
         {
             "id": 18,
-            "name": "Lucknow",
+            "name": "Lucknow, Uttar Pradesh",
             "category": "Uttar Pradesh",
             "content": "The capital and the largest city of Uttar Pradesh, Lucknow, situated on the banks of river Gomti, welcomes you with a heartwarming note of 'Muskuraiyein, kyunki aap Lucknow mein hai'. A city of kebabs and nawabs, of architecture and history, of literature and culture  that is Lucknow in a nutshell for you.",
             "visit": "Bara Imambara, Chhota Imambara, British Residency, Rumi Darwaza, Ambedkar Memorial Park, Wales Zoological Gardens, Indira Gandhi Planetarium",
@@ -200,7 +200,7 @@
         },
         {
             "id": 19,
-            "name": "Mathura",
+            "name": "Mathura, Uttar Pradesh",
             "category": "Uttar Pradesh",
             "content": "One of Hinduisms seven sacred cities, Mathura is the birthplace of the very beloved Lord Krishna. Located in the state of Uttar Pradesh, Mathura and Vrindavan are often considered twin cities located only 10km away from each other. Mathura is a small town dotted with temples from various ages and attracts a horde of pilgrims from all over the world.",
             "visit": "Shri Krishna Janmasthan Temple, Dwarkadhish Temple, Birla Mandir, Govardhan Hill, Kusum Sarovar, Vishram Ghat",
@@ -211,7 +211,7 @@
         },
         {
             "id": 20,
-            "name": "Raipur",
+            "name": "Raipur, Chattisgarh",
             "category": "Chattisgarh",
             "content": "The capital of Chhattisgarh, Raipur is the largest city in the state. With more than hundreds of steel mills and six steel plants, Raipur is also one of the largest industrial centres of the country. Besides steel, it is also home to the aluminium and coal industries. A primary business and industrial hub",
             "visit": "Ghatarani Waterfalls, Nandan Van Zoo, Purkhauti Muktangan, Swami Vivekanand Sarovar, Gandhi Udyan Park, MM Fun City",
@@ -222,7 +222,7 @@
         },
         {
             "id": 21,
-            "name": "Jagdalpur",
+            "name": "Jagdalpur, Chattisgarh",
             "category": "Chattisgarh",
             "content": "Jagdalpur is a beautiful and naturally bountiful city in the Bastar district of Chhattisgarh and is one of the most popular tourist destinations in the state after Raipur and Bhilai. It is well connected to the state capital and to other nearby cities and is relatively unknown among tourists outside the state.",
             "visit": "Chitrakote, Tirathgarh waterfall, Dalpat Sagar, Kanger Valley National Park, Kailash and Kutumsar caves, Bastar palace, Chitradhara fall",
@@ -233,7 +233,7 @@
         },
         {
             "id": 22,
-            "name": "Shillong",
+            "name": "Shillong, Meghalaya",
             "category": "Meghalaya",
             "content": "A beautiful city encircled by pine trees, Shillong is the capital of Meghalaya. It derives its name from Lei Shyllong, an idol worshipped at the Shillong Peak. Standing as tall as 1496 meters, this hill station is known for its weather, picturesque locations and traditions. This place is also known as the Scotland of the East.",
             "visit": "Elephant Falls, Shillong Peak, Umiam Lake, Laitlum Canyons, Wards Lake, Mawlynnong",
@@ -244,7 +244,7 @@
         },
         {
             "id": 23,
-            "name": "Cherrapunji",
+            "name": "Cherrapunji, Meghalaya",
             "category": "Meghalaya",
             "content": "Earlier the wettest place on the Earth, Cherrapunji in Meghalaya, also known as Sohra, is known for its double-decker living root bridge. Located around 50 Kms from Shillong, this sub-divisional town is famous for its rich flora and natural attractions.",
             "visit": "Double Decker Living Root Bridge, Dawki, Nohkalikai falls, Mawsmai Cave, The Mawkdok Dympep Valley",
@@ -650,7 +650,7 @@
             "img4": ""
         },
         {
-            "id": 61,
+            "id": 60,
             "name": "Kohima, Nagaland",
             "category": "Nagaland",
             "content": "The capital of Nagaland deserves to be on the must-visit list of everyone. Kohima, originally Kewhira, is pure bliss for anyone who loves being amidst untouched nature. It is located at a height of 1500 meters above sea level. It is surrounded by breath-taking mountains and forests. One can also indulge in adventures like trekking, hiking, and camping in this region. This place is home to the Angami tribe.",
@@ -661,7 +661,7 @@
             "img4": ""
         },
         {
-            "id": 62,
+            "id": 61,
             "name": "Dimapur, Nagaland",
             "category": "Nagaland",
             "content": "One enters Nagaland through Dimapur, as the airport is situated here. This place, counted amongst the top Nagaland tourist spots, offers an equal amount of delight to both nature and history lovers. Watch out for Kachari ruins from the 10th century that stands in the backdrop of enthralling nature. There are plenty of locations you can visit in and around Dimapur to experience surreal nature or marvel at historically rich old ruins.",
@@ -672,7 +672,7 @@
             "img4": ""
         },
         {
-            "id": 63,
+            "id": 62,
             "name": "Aizawl, Mizoram",
             "category": "Mizoram",
             "content": "Have you ever dreamt of a paradise on earth? Then, that dream is going to turn into reality at Aizawl. This is one of the oldest cities of Mizoram and attracts a lot of tourists because of the picturesque views it offers. The tranquil setup of this quaint town can leave your mind, body, and soul totally relaxed. This town has plenty of Mizoram tourist places for visitors.",
@@ -683,7 +683,7 @@
             "img4": ""
         },
         {
-            "id": 64,
+            "id": 63,
             "name": "Mamit, Mizoram",
             "category": "Mizoram",
             "content": "Mamit is one of the top tourist attractions in Mizoram. There are a lot of attractions in this place and most of the wildlife enthusiasts love to go to Mamit. The Dampa Wildlife Sanctuary is one of the best attractions to visit here and you can spot peacock, Malabar pied hornbill, crested serpent eagle, and emerald-dove. If you love to be in the wild, this is the best place to visit.",
@@ -694,22 +694,11 @@
             "img4": ""
         },
         {
-            "id": 65,
-            "name": "Sikkim",
+            "id": 64,
+            "name": "Sikkim, Sikkim",
             "category": "Sikkim",
             "content": "Sikkim is one of the beauties in the northeastern part of India. It is nicely tucked away and beautifully landlocked with immense natural beauty; it has all the components which would soothe you from the tiredness of vigorous day-to-day activities",
             "visit": "Tsomgo Lake , Yuksom , Nathula Pass , Singalila National Park , Namchi , Ravangla",
-            "img1": "",
-            "img2": "",
-            "img3": "",
-            "img4": ""
-        },
-        {
-            "id": 66,
-            "name": "Shillong, Meghalaya",
-            "category": "Meghalaya",
-            "content": "Shillong, the capital of Meghalaya, is one of the most beautiful hill stations in India. Often referred to as the 'Scotland of the East,' Shillong is known for its mesmerizing landscapes, rich culture, and pleasant weather throughout the year. The city is situated at an altitude of 1496 meters above sea level.",
-            "visit": "Umiam Lake , Shillong Peak , Elephant Falls , Ward's Lake , Don Bosco Centre for Indigenous Cultures , Police Bazar",
             "img1": "",
             "img2": "",
             "img3": "",

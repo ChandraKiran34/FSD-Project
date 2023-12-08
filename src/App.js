@@ -24,6 +24,10 @@ import HotelRegister from './Pages/HotelRegister';
 import AgencyRegister from './Pages/HotelRegister';
 import AboutUs from "./Pages/AboutUs";
 import AdminDashBoard from "./Admin/AdminDashBoard";
+import { AuthContexts } from "./FireBase/AuthContexts";
+
+import PrivateRoute from "./PrivateRoutes/PrivateRoute";
+import PlaceDescreption from "./Pages/PlaceDescription";
 
 const Router = createBrowserRouter([
   {
@@ -40,7 +44,7 @@ const Router = createBrowserRouter([
   },
   {
     path: "/join",
-    element: <Join/>,
+    element: <Join />,
   },
   {
     path: "/contact",
@@ -55,20 +59,24 @@ const Router = createBrowserRouter([
     element: <SignUp />,
   },
   {
-    path:'/userdashboard/*',
-    element:<UserDashBoard />
+    path: "/userdashboard/*",
+    element: (
+      <PrivateRoute role={"user"}>
+        <UserDashBoard />
+      </PrivateRoute>
+    ),
   },
   {
-    path:'/guidedashboard/*',
-    element:<GuideDashBoard />
+    path: "/guidedashboard/*",
+    element: <GuideDashBoard />,
   },
   {
-    path:'/hoteldashboard/*',
-    element:<HotelDashBoard />
+    path: "/hoteldashboard/*",
+    element: <HotelDashBoard />,
   },
   {
-    path:'/agencydashboard/*',
-    element:<AgencyDashBoard />
+    path: "/agencydashboard/*",
+    element: <AgencyDashBoard />,
   },
   {
     path:'/admindashboard/*',
@@ -90,10 +98,10 @@ const Router = createBrowserRouter([
 
 function App() {
   return (
-   <RouterProvider router={Router}/>
+    <AuthContexts>
+      <RouterProvider router={Router} />
+    </AuthContexts>
   );
 }
 
 export default App;
-
-

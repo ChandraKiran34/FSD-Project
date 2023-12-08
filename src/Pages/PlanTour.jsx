@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Link} from 'react-router-dom'
 import axios from "axios";
 import "../CSS/PlanTour.css";
 import Navbar from "../Components/Navbar";
@@ -13,7 +14,7 @@ const PlanTour = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/places.json");
+        const response = await axios.get("./places.json");
         const placesArray = response.data.places;
 
         if (Array.isArray(placesArray)) {
@@ -22,6 +23,7 @@ const PlanTour = () => {
           console.error("Data is not an array:", placesArray);
         }
       } catch (error) {
+        alert("error fetching data")
         console.error("Error fetching data:", error);
       }
     };
@@ -54,13 +56,15 @@ const PlanTour = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <div className="featured-row">
-            {filteredProducts.map((product) => (
-              <div key={product.id} className="card-hover w-[10vh] p-5">
+            {filteredProducts.map((place) => (
+              <div key={place.id} className="card-hover w-[10vh] p-5">
                 {/* Add your content for each place here */}
+                <Link to={`/place/${place.id}/${encodeURIComponent(place.name)}`}>
                 <FaHeart className="absolute ml-[21rem] mt-[10px] text-[#fc5252]"/>
-                <img className="image ml-5 rounded object-fill h-98 w-96" src={product.image} alt={product.name}  />
-                <p className="ml-5 mt-5 font-bold flex"><MdLocationOn className="mt-1"/> {product.name}</p>
-                <p className="ml-5 mt-5 text-justify">{product.desc}</p>
+                <img className="image ml-5 rounded object-fill h-98 w-96" src={place.image} alt={place.name}  />
+                <p className="ml-5 mt-5 font-bold flex"><MdLocationOn className="mt-1"/> {place.name}</p>
+                <p className="ml-5 mt-5 text-justify">{place.desc}</p>
+                </Link>
               </div>
             ))}
           </div>
