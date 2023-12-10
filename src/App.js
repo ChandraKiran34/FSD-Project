@@ -131,8 +131,13 @@ const Router = createBrowserRouter([
     element: <PlaceDescreption />,
   },
   {
-    path: "/paymentform", // Use :id as a parameter in the path
-    element: <FakePaymentForm />,
+   path:"/paymentform/:id/:name" , // Use :id as a parameter in the path
+    element: 
+    (
+      <PrivateRoute roles={"user"}>
+       <FakePaymentForm />,
+      </PrivateRoute>
+    ),
   },
   {
     path: "/paymentform/tourdetails",

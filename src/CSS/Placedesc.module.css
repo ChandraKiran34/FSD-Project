@@ -104,7 +104,7 @@
   }
   .rightcontent {
     width: 370px;
-    height: 250px;
+    height: 150px;
     margin-left: 40px;
     margin-top: 0px;
     border-radius: 10px;
@@ -141,6 +141,7 @@
   }
   
   .booknow {
+    margin-top: 20px;
     margin-left: 100px;
     display: inline-block;
     padding: 10px 25px;

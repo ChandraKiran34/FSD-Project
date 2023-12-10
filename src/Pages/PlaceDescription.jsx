@@ -2,7 +2,8 @@
 import classes from "../CSS/Placedesc.module.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+
 import { MdHeight, MdOutlineStarPurple500 } from "react-icons/md";
 import {
   FaArrowLeft,
@@ -21,6 +22,7 @@ import { IoLocation } from "react-icons/io5";
 const PlaceDescreption = () => {
   const [productData, setProductData] = useState([]);
   const { id, name } = useParams();
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -47,6 +49,11 @@ const PlaceDescreption = () => {
 
     fetchData();
   }, [id]); // Add id as a dependency to re-fetch when id changes
+
+  const handleBookNow = () => {
+    // Navigate to the FakePaymentForm route with location as a parameter
+    navigate(`/paymentform/${id}/${encodeURIComponent(name)}`);
+  };
 
   return (
     <>
@@ -158,7 +165,7 @@ const PlaceDescreption = () => {
           <div className={classes.rightcontent}>
             <h2 className="font-[500] ml-[70px]">₹5000 per day</h2>
             <div>
-              <div className={classes.check}>
+              {/* <div className={classes.check}>
                 <h3>
                   Check in :
                   <input
@@ -177,8 +184,8 @@ const PlaceDescreption = () => {
                     placeholder="Check Out"
                   />
                 </h3>
-              </div>
-              <button className={classes.booknow}>Book now</button>
+              </div> */}
+              <button className={classes.booknow} onClick={handleBookNow}>Book now</button>
             </div>
           </div>
         </div>

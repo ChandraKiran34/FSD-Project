@@ -1,18 +1,104 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../FireBase/AuthContexts";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  addDoc,
+  getDoc,
+  doc,
+  serverTimestamp,
+} from "firebase/firestore";
+import { db } from "../FireBase/config";
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
 const FakePaymentForm = () => {
+  const { id, name } = useParams();
+  const userData = useSelector((state) => state.user.data);
+  const { user ,role} = useAuth();  
   const [bookingData, setBookingData] = useState({
     hotel: "",
     guide: "",
     agency: "",
     numberOfPersons: 1,
+    location: name, // Add location to the bookingData
   });
-  const nav = useNavigate()
-  const [paymentStatus, setPaymentStatus] = useState('pending')
+
+  const [paymentStatus, setPaymentStatus] = useState("pending");
   const [paymentData, setPaymentData] = useState({
     cardNumber: "",
     password: "",
   });
+
+  const [agencies, setAgencies] = useState([]);
+  const [hotels, setHotels] = useState([]);
+  const [guides, setGuides] = useState([]);
+  const nav = useNavigate();
+
+  useEffect(() => {
+    // Fetch agencies based on location
+    const fetchAgencies = async (location) => {
+      const agenciesCollection = collection(db, "users");
+      const agenciesQuery = query(
+        agenciesCollection,
+        where("location", "==", location),
+        where("role", "==", "agency")
+      );
+      const agenciesSnapshot = await getDocs(agenciesQuery);
+
+      const agenciesList = agenciesSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setAgencies(agenciesList);
+    };
+
+    // Fetch hotels based on location
+    const fetchHotels = async (location) => {
+      const hotelsCollection = collection(db, "users");
+      const hotelsQuery = query(
+        hotelsCollection,
+        where("location", "==", location),
+        where("role", "==", "hotel")
+      );
+      const hotelsSnapshot = await getDocs(hotelsQuery);
+
+      const hotelsList = hotelsSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setHotels(hotelsList);
+    };
+
+    // Fetch guides based on location
+    const fetchGuides = async (location) => {
+      const guidesCollection = collection(db, "users");
+      const guidesQuery = query(
+        guidesCollection,
+        where("location", "==", location),
+        where("role", "==", "guide")
+      );
+      const guidesSnapshot = await getDocs(guidesQuery);
+
+      const guidesList = guidesSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      setGuides(guidesList);
+    };
+
+    // Fetch agencies, hotels, and guides when location changes
+    if (bookingData.location) {
+      fetchAgencies(bookingData.location);
+      fetchHotels(bookingData.location);
+      fetchGuides(bookingData.location);
+    }
+  }, [bookingData.location]);
 
   const handleBookingChange = (field, value) => {
     setBookingData((prevData) => ({ ...prevData, [field]: value }));
@@ -28,30 +114,50 @@ const FakePaymentForm = () => {
     return totalAmount;
   };
 
-  const handleHomeClick = () =>(
-    nav('/')
-  )
-  const handleDashboardClick = () =>(
-    nav('/userdashboard')
-  )
+  const handleHomeClick = () => nav("/");
+  const handleDashboardClick = () => nav("/userdashboard");
 
-  const handleProceed = () => {
-    // Add your logic to handle the payment and navigate to the user dashboard
-    console.log("Processing payment...");
-    setPaymentStatus('success');
-    if(paymentStatus === 'success ')
-    {
-      nav('/payment/tourdetails')
+  const handleProceed = async () => {
+    try {
+      // Get the details of the logged-in user
+      let currentUser = null;
+      if (role === "user") {
+        currentUser = { email: userData.email /* add other user details if needed */ };
+      } else {
+        // Fetch details from Redux or Firebase based on your implementation
+        // ...
+
+        // For demonstration, let's assume you have user details in Redux
+        currentUser = userData; // Update with your actual Redux state structure
+      }
+
+      // Store booking details in the "bookings" collection
+      const bookingsCollection = collection(db, "bookings");
+      const newBooking = {
+        ...bookingData,
+        user: currentUser,
+        totalPrice: calculateTotalAmount(),
+        paymentStatus,
+        paymentData,
+        timestamp: serverTimestamp(),
+      };
+      const docRef = await addDoc(bookingsCollection, newBooking);
+
+      console.log("Booking stored with ID: ", docRef.id);
+
+      // For demonstration purposes, you can replace the following line with your navigation logic.
+      alert("Payment successful! Redirecting to user dashboard.");
+      nav("/paymentform/tourdetails");
+    } catch (error) {
+      console.error("Error storing booking details:", error);
     }
-    
-    // For demonstration purposes, you can replace the following line with your navigation logic.
-    alert("Payment successful! Redirecting to user dashboard.");
-    
   };
-
+  
   return (
     <div className="max-w-[50vw] mx-auto p-8 pl-[5rem] pr-[5rem] mt-[4rem] bg-[#4ea7fb] shadow-inner rounded-md">
-      <h1 className="">Payment form</h1>
+      <h1 className="text-black font-bold text-3xl ml-[12rem] mb-[3rem] underline-offset-2">
+        Payment form
+      </h1>
       <div className="mb-4">
         <label className="block text-sm font-medium text-[#141a15]">
           Choose Your Hotel
@@ -61,7 +167,11 @@ const FakePaymentForm = () => {
           onChange={(e) => handleBookingChange("hotel", e.target.value)}
         >
           <option value="">Select Hotel</option>
-          {/* Add more hotel options */}
+          {hotels.map((hotel) => (
+            <option key={hotel.id} value={hotel.id}>
+              {hotel.name}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -74,7 +184,11 @@ const FakePaymentForm = () => {
           onChange={(e) => handleBookingChange("guide", e.target.value)}
         >
           <option value="">Select Guide</option>
-          {/* Add more guide options */}
+          {guides.map((guide) => (
+            <option key={guide.id} value={guide.id}>
+              {guide.name}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -87,7 +201,11 @@ const FakePaymentForm = () => {
           onChange={(e) => handleBookingChange("agency", e.target.value)}
         >
           <option value="">Select Travel Agency</option>
-          {/* Add more agency options */}
+          {agencies.map((agency) => (
+            <option key={agency.id} value={agency.id}>
+              {agency.name}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -143,7 +261,7 @@ const FakePaymentForm = () => {
 
       <div>
         <button
-          className="px-4 py-2 ml-[3rem] bg-green-500 text-white rounded-md hover:bg-green-600"
+          className="px-4 py-2  flex justify-center items-center ml-[13rem] mt-[2rem] bg-green-500 text-white rounded-md hover:bg-green-600"
           onClick={handleProceed}
         >
           Proceed to Payment
