@@ -15,8 +15,11 @@ import UserDashBoard from "./Userboard/UserDashBoard";
 import GuideDashBoard from "./Guideboard/GuideDashBoard";
 import HotelDashBoard from "./Hotelboard/HotelDashBoard";
 import AgencyDashBoard from "./Agencyboard/AgencyDashBoard";
-import SignIn from "./Pages/SignIn";
-import SignUp from "./Pages/SignUp";
+import SignIn from './Pages/SignIn';
+import SignUp from './Pages/SignUp';
+import GuideRegister from './Pages/GuideRegister';
+import HotelRegister from './Pages/HotelRegister';
+import AgencyRegister from './Pages/HotelRegister';
 import AboutUs from "./Pages/AboutUs";
 import AdminDashBoard from "./Admin/AdminDashBoard";
 import { AuthContexts } from "./FireBase/AuthContexts";
@@ -116,12 +119,12 @@ const Router = createBrowserRouter([
     ), 
   },
   {
-    path: "/admindashboard/*",
-    element: <AdminDashBoard />,
+    path:'/admindashboard/*',
+    element:<AdminDashBoard />
   },
   {
-    path: "/placedesc",
-    element: <PlaceDescreption />,
+    path:'/guideregister',
+    element:<GuideRegister />
   },
   {
     path: "/place/:id/:name", // Use :id as a parameter in the path
