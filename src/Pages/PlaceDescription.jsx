@@ -1,5 +1,5 @@
 // import React from 'react';
-import classes from "../CSS//Placedesc.module.css";
+import classes from "../CSS/Placedesc.module.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -51,7 +51,7 @@ const PlaceDescreption = () => {
   return (
     <>
       <div className={classes.main}>
-        <div className="flex justify-around">
+        <div className="flex justify-around mt-0">
           <Link to="/plantour" className="w-fit inline-block">
             <FaArrowLeft className=" rounded-full p-2  text-black font-bold text-4xl hover:opacity-4 bg-[#4caf50] " />
           </Link>
@@ -67,7 +67,7 @@ const PlaceDescreption = () => {
         <div className={classes.topmain}>
           <div>
             <img
-              src={NorthGoa}
+              src={productData[0]?.img1}
               alt="images"
               className={classes.leftimg + " hover:shadow-md"}
             />
@@ -75,13 +75,13 @@ const PlaceDescreption = () => {
           <div>
             <div>
               <img
-                src={NorthGoa}
+                src={productData[0]?.img1}
                 alt="images"
                 className={classes.rightimg + " hover:shadow-md"}
               />
             </div>
             <img
-              src={NorthGoa}
+              src={productData[0]?.img1}
               alt="images"
               className={classes.rightimg + " hover:shadow-md"}
             />
@@ -110,7 +110,7 @@ const PlaceDescreption = () => {
               </p>
               <p className="mt-5">
                 <div className="flex">
-                  <FaNoteSticky className="font-bold text-5xl mb-4 justify-center " />{" "}
+                  <FaNoteSticky className="font-bold text-2xl mb-4 justify-center " />{" "}
                   <p className="ml-2 mt-2 underline font-semibold">
                     Description of the place
                   </p>

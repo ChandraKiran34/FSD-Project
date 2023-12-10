@@ -8,24 +8,24 @@ import { useAuth } from "../FireBase/AuthContexts";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../FireBase/config";
 
-const SignUpComp = () => {
-  const { signUp, user } = useAuth();
+const GuideSignUpComp = () => {
+  const { signUp,role } = useAuth();
   const navigate = useNavigate();
 
-  if (user) {
-    navigate("/userDashboard");
+  if (role == 'guide') {
+    navigate("/guideDashboard");
   }
 
   // const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [recentUsers, setRecentUsers] = useState([]);
+  const [recentGuides, setRecentGuides] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneNumber: "",
     password: "",
     confirmPassword: "",
-    address: "",
+    location: "",
   });
 
   // const handleCheckboxChange = () => {
@@ -42,7 +42,7 @@ const SignUpComp = () => {
         formData.email,
         formData.phoneNumber,
         formData.password,
-        formData.address
+        formData.location
       );
       console.log("checkpt 2");
       if (validationError) {
@@ -56,8 +56,8 @@ const SignUpComp = () => {
             name: formData.name,
             email: formData.email,
             mobile: formData.phoneNumber,
-            address: formData.address,
-            role: "user",
+            location: formData.location,
+            role: "guide"
           };
           const res = await signUp(formData.email, formData.password);
 
@@ -66,22 +66,21 @@ const SignUpComp = () => {
             await addDoc(collectionRef, { ...data, uid: res.user.uid });
           }
 
-          alert("User registered successfully!");
+          alert("Guide registered successfully!");
         } catch (error) {
           console.error(error);
           alert("An error occured!");
         }
-        const newUser = {
+        const newGuide = {
           ...formData,
           id: Date.now() /* Use a better ID logic */,
         };
         console.log("checkpt 4");
         // Dispatch action to add user to Redux store
-        setRecentUsers((prevUsers) => [...prevUsers, newUser]);
+        setRecentGuides((prevGuides) => [...prevGuides, newGuide]);
 
         console.log("Form Data:", formData);
-        console.log("Recently registered users:", recentUsers);
-        navigate("/signin");
+        console.log("Recently registered users:", recentGuides);
       }
     } else {
       alert("password and confirm password not same");
@@ -109,7 +108,7 @@ const SignUpComp = () => {
               <h3>If you already have an account, just sign in.</h3>
             </div>
             <div className="btn_2">
-              <Link to={"/signin"}>
+              <Link to={"/guidesignin"}>
                 <button type="button" className="submit_btn2">
                   Sign In
                 </button>
@@ -190,9 +189,9 @@ const SignUpComp = () => {
                 <input
                   className="input_s"
                   type="text"
-                  placeholder="(Address, pincode, state)"
-                  name="address"
-                  value={formData.address}
+                  placeholder="location"
+                  name="location"
+                  value={formData.location}
                   onChange={handleInputChange}
                 />
               </label>
@@ -211,4 +210,4 @@ const SignUpComp = () => {
   );
 };
 
-export default SignUpComp;
+export default GuideSignUpComp;

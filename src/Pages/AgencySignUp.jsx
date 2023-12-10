@@ -8,24 +8,25 @@ import { useAuth } from "../FireBase/AuthContexts";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../FireBase/config";
 
-const SignUpComp = () => {
-  const { signUp, user } = useAuth();
+const AgencySignUp = () => {
+  const { signUp, role } = useAuth();
   const navigate = useNavigate();
 
-  if (user) {
-    navigate("/userDashboard");
+  if (role == "agency") {
+    navigate("/agencyDashboard");
   }
 
   // const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [recentUsers, setRecentUsers] = useState([]);
+  const [recentAgency, setRecentAgency] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phoneNumber: "",
     password: "",
     confirmPassword: "",
-    address: "",
+    vehicles: "",
+    location: "",
   });
 
   // const handleCheckboxChange = () => {
@@ -42,7 +43,8 @@ const SignUpComp = () => {
         formData.email,
         formData.phoneNumber,
         formData.password,
-        formData.address
+        formData.vehicles,
+        formData.location
       );
       console.log("checkpt 2");
       if (validationError) {
@@ -56,8 +58,9 @@ const SignUpComp = () => {
             name: formData.name,
             email: formData.email,
             mobile: formData.phoneNumber,
-            address: formData.address,
-            role: "user",
+            vehicles: formData.vehicles,
+            location: formData.location,
+            role: "agency",
           };
           const res = await signUp(formData.email, formData.password);
 
@@ -66,22 +69,22 @@ const SignUpComp = () => {
             await addDoc(collectionRef, { ...data, uid: res.user.uid });
           }
 
-          alert("User registered successfully!");
+          alert("Agency registered successfully!");
         } catch (error) {
           console.error(error);
           alert("An error occured!");
         }
-        const newUser = {
+        const newAgency = {
           ...formData,
           id: Date.now() /* Use a better ID logic */,
         };
         console.log("checkpt 4");
         // Dispatch action to add user to Redux store
-        setRecentUsers((prevUsers) => [...prevUsers, newUser]);
+        setRecentAgency((prevAgencies) => [...prevAgencies, newAgency]);
 
         console.log("Form Data:", formData);
-        console.log("Recently registered users:", recentUsers);
-        navigate("/signin");
+        console.log("Recently registered users:", recentAgency);
+        navigate("/agencysignin");
       }
     } else {
       alert("password and confirm password not same");
@@ -109,7 +112,7 @@ const SignUpComp = () => {
               <h3>If you already have an account, just sign in.</h3>
             </div>
             <div className="btn_2">
-              <Link to={"/signin"}>
+              <Link to={"/agencysignin"}>
                 <button type="button" className="submit_btn2">
                   Sign In
                 </button>
@@ -189,15 +192,25 @@ const SignUpComp = () => {
               <label className="label_s">
                 <input
                   className="input_s"
+                  type="number"
+                  placeholder=" No of Vehicles available "
+                  name="vehicles"
+                  value={formData.vehicles}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <label className="label_s">
+                <input
+                  className="input_s"
                   type="text"
-                  placeholder="(Address, pincode, state)"
-                  name="address"
-                  value={formData.address}
+                  placeholder="location"
+                  name="location"
+                  value={formData.location}
                   onChange={handleInputChange}
                 />
               </label>
 
-              <button type="submit" className="submit_btn button-30">
+              <button type="submit" className="text-white border p-3 rounded mt-[1rem] ml-[15rem] bg-gradient-to-r from-[#5adaff] via-[#5468ff] to-[#5468ff] hover:opacity-3">
                 Sign Up
               </button>
               {errorMessage && (
@@ -211,4 +224,4 @@ const SignUpComp = () => {
   );
 };
 
-export default SignUpComp;
+export default AgencySignUp;

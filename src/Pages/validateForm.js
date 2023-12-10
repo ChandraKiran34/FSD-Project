@@ -31,7 +31,7 @@ const isValidEmail = (email) => {
   
   const isValidAddress = (address) => {
     // Address must be at least 12 characters long
-    return address.length >= 12;
+    return address.length >= 0;
   };
   
   const validateForm = (name, email, phoneNumber, password, address) => {

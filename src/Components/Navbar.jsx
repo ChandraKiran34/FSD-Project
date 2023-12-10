@@ -9,6 +9,7 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const { user } = useAuth();
   const { logout } = useAuth();
+  const { role } = useAuth();
   const controlNavbar = () => {
     if (window.scrollY > 40) {
       setShow(true);
@@ -23,7 +24,7 @@ const Navbar = () => {
       console.log(error);
     }
   };
-
+  console.log(role);
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
     return () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
   return (
     <nav className={classes.nav + " " + (show && classes.hidden)}>
       <Link to="/">
-        <h1 className={classes["nav-h1"]} style={{color:"white"}}>
+        <h1 className={classes["nav-h1"]} style={{ color: "white" }}>
           Pack{" "}
           <span
             style={{
@@ -57,9 +58,11 @@ const Navbar = () => {
         <li>
           <Link to="/plantour">Plan Tour</Link>
         </li>
-        <li>
-          <Link to="/join">Join</Link>
-        </li>
+        {role !== "user" && (
+          <li>
+            <Link to="/join">Join</Link>
+          </li>
+        )}
 
         <li>
           <Link to="/contact">Contact</Link>
@@ -67,7 +70,9 @@ const Navbar = () => {
         <li>
           {user ? (
             <li className={classes.dropdown}>
-              <span className={classes.dropdownLink} style={{color:"white"}}><FaUser /></span>
+              <span className={classes.dropdownLink} style={{ color: "white" }}>
+                <FaUser />
+              </span>
               {user && (
                 <div className={classes.dropdownContent}>
                   <Link to="/userdashboard">Dashboard</Link>

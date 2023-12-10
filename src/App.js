@@ -6,9 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
-import About from "./Pages/AboutUs";
 import PlanTour from "./Pages/PlanTour";
 import Join from "./Pages/Join";
 import Contact from "./Pages/Contact";
@@ -22,10 +20,16 @@ import SignUp from "./Pages/SignUp";
 import AboutUs from "./Pages/AboutUs";
 import AdminDashBoard from "./Admin/AdminDashBoard";
 import { AuthContexts } from "./FireBase/AuthContexts";
-
 import PrivateRoute from "./PrivateRoutes/PrivateRoute";
 import PlaceDescreption from "./Pages/PlaceDescription";
-
+import FakePaymentForm from "./Pages/FakePaymentForm";
+import BookingDetailsCard from "./Pages/BookingDetailsCard";
+import GuideSignUp from "./Pages/GuideSignUp";
+import GuideSignIn from "./Pages/GuideSignIn";
+import HotelSignUpComp from "./Pages/HotelSignUp";
+import HotelSignIn from "./Pages/HotelSignIn";
+import AgencySignUp from "./Pages/AgencySignUp";
+import AgencySignIn from "./Pages/AgencySignIn";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -56,24 +60,60 @@ const Router = createBrowserRouter([
     element: <SignUp />,
   },
   {
+    path: "/guidesignup",
+    element: <GuideSignUp />,
+  },
+  {
+    path: "/guidesignin",
+    element: <GuideSignIn />,
+  },
+  {
+    path: "/hotelsignup",
+    element: <HotelSignUpComp />,
+  },
+  {
+    path: "/hotelsignin",
+    element: <HotelSignIn />,
+  },
+  {
+    path: "/agencysignup",
+    element: <AgencySignUp />,
+  },
+  {
+    path: "/agencysignin",
+    element: <AgencySignIn />,
+  },
+  {
     path: "/userdashboard/*",
     element: (
-      <PrivateRoute role={"user"}>
+      <PrivateRoute roles={"user"}>
         <UserDashBoard />
       </PrivateRoute>
     ),
   },
   {
     path: "/guidedashboard/*",
-    element: <GuideDashBoard />,
+    element: (
+      <PrivateRoute roles={"guide"}>
+        <GuideDashBoard />
+      </PrivateRoute>
+    ),
   },
   {
     path: "/hoteldashboard/*",
-    element: <HotelDashBoard />,
+    element: (
+      <PrivateRoute roles={"hotel"}>
+        <HotelDashBoard />
+      </PrivateRoute>
+    ),
   },
   {
     path: "/agencydashboard/*",
-    element: <AgencyDashBoard />,
+    element: (
+      <PrivateRoute roles={"agency"}>
+        <AgencyDashBoard />,
+      </PrivateRoute>
+    ), 
   },
   {
     path: "/admindashboard/*",
@@ -84,12 +124,21 @@ const Router = createBrowserRouter([
     element: <PlaceDescreption />,
   },
   {
-    path:"/place/:id/:name", // Use :id as a parameter in the path
+    path: "/place/:id/:name", // Use :id as a parameter in the path
     element: <PlaceDescreption />,
-  }
+  },
+  {
+    path: "/paymentform", // Use :id as a parameter in the path
+    element: <FakePaymentForm />,
+  },
+  {
+    path: "/paymentform/tourdetails",
+    element: <BookingDetailsCard />,
+  },
 ]);
 
 function App() {
+  
   return (
     <AuthContexts>
       <RouterProvider router={Router} />

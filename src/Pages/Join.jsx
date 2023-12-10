@@ -16,7 +16,7 @@ const Join = () => {
             <FaMapLocationDot size={60} className="join-icon" />
             <h3 className="font-bold">Tourist Guide</h3>
             <p>If You known a place completely.Come and join with us.</p>
-            <Link to="/signin" className="border mt-9 p-3 w-1/2 ml-[4.5rem] bg-[#4970ef] border-none font-semibold rounded">Join</Link>
+            <Link to="/guidesignin" className="border mt-9 p-3 w-1/2 ml-[4.5rem] bg-[#4970ef] border-none font-semibold rounded">Join</Link>
           </div>
           <div className="box">
             <FaHotel size={60} className="join-icon" />
@@ -24,14 +24,14 @@ const Join = () => {
             <p>
               Do you have a Hotel? if your naswer is yes,register your hotel
             </p>
-            <Link to="/signin" className="border mt-9 p-3 w-1/2 ml-[4.5rem] bg-[#4970ef] border-none font-semibold rounded">Join</Link>
+            <Link to="/hotelsignin" className="border mt-9 p-3 w-1/2 ml-[4.5rem] bg-[#4970ef] border-none font-semibold rounded">Join</Link>
           </div>
 
           <div className="box">
             <FaCarRear size={60} className="join-icon" />
             <h3  className="font-bold">Travel Agency</h3>
             <p>Register your travel agency in our website</p>
-            <Link to="/signin" className="border mt-9 p-3 w-1/2 ml-[4.5rem] bg-[#4970ef] border-none font-semibold rounded" >Join</Link>
+            <Link to="/agencysignin" className="border mt-9 p-3 w-1/2 ml-[4.5rem] bg-[#4970ef] border-none font-semibold rounded" >Join</Link>
           </div>
         </div>
       </div>

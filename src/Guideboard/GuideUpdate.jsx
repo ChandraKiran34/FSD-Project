@@ -1,13 +1,24 @@
 // GuideUpdate.js
 
 import React, { useState } from 'react';
-
+import { useSelector } from 'react-redux';
 function GuideUpdate() {
   // Use state to manage form input values
   const [name, setName] = useState('Manikantha Rayudu'); // Default name
   const [phoneNumber, setPhoneNumber] = useState('8093823499'); // Default phone number
   const [location, setLocation] = useState('city1'); // Default location
   const [language, setLanguage] = useState('Hindi, English, Marathi, Telugu, Tamil')
+
+  const userData = useSelector((state) => state.guide.data);
+
+  console.log(userData);
+
+  const [guide, setGuide] = useState({
+    name: userData?.name,
+    email: userData?.email,
+    mobile:userData?.mobile,
+    location:userData?.location,
+  });
 
   // Function to handle form submission
   const handleSubmit = (e) => {
@@ -35,7 +46,7 @@ function GuideUpdate() {
                 className="border p-2 rounded-md"
                 type="text"
                 id="name"
-                value={name}
+                value={guide.name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name"
                 required
@@ -48,7 +59,7 @@ function GuideUpdate() {
                 className="border p-2 rounded-md"
                 type="tel"  // Use type "tel" for phone numbers
                 id="phoneNumber"
-                value={phoneNumber}
+                value={guide.mobile}
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 placeholder="Enter your contact no."
                 pattern="[0-9]{3}[0-9]{3}[0-9]{4}"  // Example pattern for XXX-XXX-XXXX format
@@ -60,19 +71,14 @@ function GuideUpdate() {
             {/* Location input */}
             <div className="w-96 ml-6 p-3 flex flex-col justify-between form-group">
               <label htmlFor="location" className="font-semibold">Location:</label>
-              <select
+              <input
                 className="border p-2 rounded-md"
                 id="location"
-                value={location}
+                value={guide.location}
                 onChange={(e) => setLocation(e.target.value)}
                 required
               >
-                <option value="">Select your location</option>
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
-                <option value="city3">City 3</option>
-                {/* Add more options as needed */}
-              </select>
+              </input>
             </div>
 
             {/* Languages input */}

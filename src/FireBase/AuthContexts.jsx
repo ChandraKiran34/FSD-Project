@@ -14,12 +14,15 @@ import {
 import { useDispatch } from "react-redux";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { setUser } from "../features/user/UserSlice.js";
-
+import { setGuide } from "../features/guide/GuideSlice.js";
+import { setHotel } from "../features/hotel/HotelSlice.js";
+import { setAgency } from "../features/agency/AgencySlice.js";
 const AuthContext = React.createContext();
 
 export const AuthContexts = ({ children }) => {
   const dispatch = useDispatch();
   const [user, setCurrentUser] = useState();
+  const [role, setRole] = useState();
   const [isLoading, setLoading] = useState(true);
 
   const signUp = async (email, password) => {
@@ -57,13 +60,28 @@ export const AuthContexts = ({ children }) => {
               id: doc.id,
             }));
 
-            dispatch(setUser(data[0]));
+            if (data[0].role == "user") {
+              dispatch(setUser(data[0]));
+              setRole("user");
+            } else if (data[0].role == "guide") {
+              dispatch(setGuide(data[0]));
+              setRole("guide");
+            }else if(data[0].role == "hotel"){
+              dispatch(setHotel(data[0]));
+              setRole("hotel");
+            }else if(data[0].role == "agency"){
+              dispatch(setAgency(data[0]));
+              setRole("agency");
+            }
+            setCurrentUser(user);
           }
         } catch (error) {
           console.error(error);
         }
+      } else {
+        setRole();
+        setCurrentUser();
       }
-      setCurrentUser(user);
     });
     setLoading(false);
 
@@ -77,6 +95,7 @@ export const AuthContexts = ({ children }) => {
     logout,
     sendPasswordReset,
     signInWithGoogle,
+    role,
   };
   return (
     <AuthContext.Provider value={value}>
