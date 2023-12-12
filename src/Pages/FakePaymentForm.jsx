@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import { useAuth } from "../FireBase/AuthContexts";
 import {
   collection,
@@ -14,7 +15,9 @@ import {
 import { db } from "../FireBase/config";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import {setBooking} from '../features/booking/BookingSlice'
 const FakePaymentForm = () => {
+  const dispatch = useDispatch();
   const { id, name } = useParams();
   const userData = useSelector((state) => state.user.data);
   const { user ,role} = useAuth();  
@@ -143,11 +146,14 @@ const FakePaymentForm = () => {
       };
       const docRef = await addDoc(bookingsCollection, newBooking);
 
+      setPaymentStatus("success");
       console.log("Booking stored with ID: ", docRef.id);
 
+      dispatch(setBooking(bookingData))
       // For demonstration purposes, you can replace the following line with your navigation logic.
       alert("Payment successful! Redirecting to user dashboard.");
-      nav("/paymentform/tourdetails");
+     
+        nav('/paymentform/tourdetails');
     } catch (error) {
       console.error("Error storing booking details:", error);
     }
@@ -168,7 +174,7 @@ const FakePaymentForm = () => {
         >
           <option value="">Select Hotel</option>
           {hotels.map((hotel) => (
-            <option key={hotel.id} value={hotel.id}>
+            <option key={hotel.id} value={hotel.name}>
               {hotel.name}
             </option>
           ))}
@@ -185,7 +191,7 @@ const FakePaymentForm = () => {
         >
           <option value="">Select Guide</option>
           {guides.map((guide) => (
-            <option key={guide.id} value={guide.id}>
+            <option key={guide.id} value={guide.name}>
               {guide.name}
             </option>
           ))}
@@ -202,7 +208,7 @@ const FakePaymentForm = () => {
         >
           <option value="">Select Travel Agency</option>
           {agencies.map((agency) => (
-            <option key={agency.id} value={agency.id}>
+            <option key={agency.id} value={agency.name}>
               {agency.name}
             </option>
           ))}
