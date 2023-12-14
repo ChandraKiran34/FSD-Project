@@ -10,6 +10,7 @@ import Footer from "../Components/Footer";
 function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   return (
     <>
     <Navbar />
@@ -46,8 +47,8 @@ function Contact() {
               <textarea
                 type="text"
                 name="contact-email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 placeholder="Enter your email"
                 rows="5"
               ></textarea>

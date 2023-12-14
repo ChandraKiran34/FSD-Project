@@ -58,7 +58,7 @@ function NavigationBar({ isExpanded, setIsExpanded }) {
       animate={isExpanded ? "expanded" : "nonExpanded"}
       variants={variants}
       className={
-        "px-10 py-12 flex flex-col bg-[#4B5320] text-white border border-r-1 w-1/3  relative h-screen" +
+        "px-10 py-12 flex flex-col bg-[#4B5320] text-white border border-r-1 w-1/3  relative min-h-screen" +
         (isExpanded ? " px-10" : " px-2")
       }
     >
